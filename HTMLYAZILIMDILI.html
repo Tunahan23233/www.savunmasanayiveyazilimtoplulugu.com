@@ -1,0 +1,1401 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>HTML</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="HTMLTASARIM.css" rel="stylesheet" />
+    <script>
+        $(document).ready(function () {
+            $("#butto").click(function () {
+                alert($("#text").html());
+            })
+            $("#button1").click(function () {
+                $("#text1").html("<b>TÜRK<b>");
+            })
+            $("#button2").click(function () {
+                var deger = $("#birdeger").val();
+                $("#yazı").html(deger);
+            })
+
+            $("#krm").click(function () {
+                $("#yazılacakdeger").val("Hello World");
+            })
+        })
+    </script>
+
+
+</head>
+<body>
+    <!--<nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3 fixed-top"  >
+        <a class="navbar-brand" href="Anasayfa.html">Anasayfa</a>
+        <ul class="nav nav-pills">
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Konular</a>
+                <ul class="dropdown-menu dropdown-menu-scrollable">
+                    <li><a class="dropdown-item" href="#ilk">HTML</a></li>
+                    <li><a class="dropdown-item" href="#p">p etiketi</a></li>
+
+                    <li><a class="dropdown-item" href="#a">a etiketi</a></li>
+                    <li><a class="dropdown-item" href="#brandhr">br ve hr etiketi</a></li>
+                    <li><a class="dropdown-item" href="#div">div etiketi</a></li>
+                    <li><a class="dropdown-item" href="#ulandol">ul ve ol etiketi</a></li>
+                    <li><a class="dropdown-item" href="#bUTON">buton etiketi</a></li>
+                    <li><a class="dropdown-item" href="#img">img etiketi</a></li>
+                    <li><a class="dropdown-item" href="#basliklar">başlıklar(h1,h2,h3,h4,h5,h6) etiketi</a></li>
+                    <li><a class="dropdown-item" href="#textcoloreffect">Yazı ve görsel  efektler</a></li>
+                    <li><a class="dropdown-item" href="#tablo">tablo ve alt kolları(table,td,th) etiketleri</a></li>
+                    <li><a class="dropdown-item" href="#bootstrap">HTML içi CSS(Bootstrap)</a></li>
+                    <li><a class="dropdown-item" href="#navbar">Navbar</a></li>
+                    <li><a class="dropdown-item" href="#map">map etiketi</a></li>
+                    <li><a class="dropdown-item" href="#picture">picture etiketi</a></li>
+                    <li><a class="dropdown-item" href="#input">input etiketi</a></li>
+                    <li><a class="dropdown-item" href="#script">script etiketi</a></li>
+                    <li><a class="dropdown-item" href="#kısayollar">Kısayollar</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>-->
+    <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3 fixed-top">
+        <a class="navbar-brand" href="Anasayfa.html">Anasayfa</a>
+        <ul class="nav nav-pills">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Konular</a>
+                <ul class="dropdown-menu overflow-auto dropdown-menu-scrollable" style="max-height: 300px;">
+                    <li><a class="dropdown-item" href="#ilk">HTML</a></li>
+                    <li><a class="dropdown-item" href="#p">p etiketi</a></li>
+                    <li><a class="dropdown-item" href="#a">a etiketi</a></li>
+                    <li><a class="dropdown-item" href="#brandhr">br ve hr etiketi</a></li>
+                    <li><a class="dropdown-item" href="#div">div etiketi</a></li>
+                    <li><a class="dropdown-item" href="#ulandol">ul ve ol etiketi</a></li>
+                    <li><a class="dropdown-item" href="#bUTON">buton etiketi</a></li>
+                    <li><a class="dropdown-item" href="#img">img etiketi</a></li>
+                    <li><a class="dropdown-item" href="#basliklar">başlıklar(h1,h2,h3,h4,h5,h6) etiketi</a></li>
+                    <li><a class="dropdown-item" href="#textcoloreffect">Yazı ve görsel efektler</a></li>
+                    <li><a class="dropdown-item" href="#tablo">tablo ve alt kolları(table,td,th) etiketleri</a></li>
+                    <li><a class="dropdown-item" href="#bootstrap">HTML içi CSS(Bootstrap)</a></li>
+                    <li><a class="dropdown-item" href="#navbar">Navbar</a></li>
+                    <li><a class="dropdown-item" href="#map">map etiketi</a></li>
+                    <li><a class="dropdown-item" href="#picture">picture etiketi</a></li>
+                    <li><a class="dropdown-item" href="#input">input etiketi</a></li>
+                    <li><a class="dropdown-item" href="#script">script etiketi</a></li>
+                    <li><a class="dropdown-item" href="#kısayollar">Kısayollar</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <br />
+    <br />
+    <br />
+    <!--<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0" style="background-color:lightblue">-->
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0" style="background-color:lightblue">
+        <div id="ilk">
+            <h2 style="text-align:center">HTML</h2>
+
+            <p>
+                HTML web site yapımında kullanılan yazılım dilidir eğer HTML'de head etiketinin altına style etiketi koyulursa CSS yazılım diline girer.HTML'de genelde tüm etiketlerin başına  &lt; (küçüktür) sonuna &gt; (büyüktür) konulur.<br />
+            </p>
+            <b>HTML sayfası oluşturmak için</b>
+            <br />
+            <img src="Mysqldir/cozum.png" alt="make" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <img src="Mysqldir/tık.png" alt="make" class=" container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <img src="Mysqldir/ac.png" alt="make" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <img src="Mysqldir/ac2.png" alt="make" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+        </div>
+        <div id="p">
+            <h3>p etiketi</h3>
+            <p>p etiketi yazı etiketidir yazılanı web sitede gösterir</p>
+            <br />
+            <p style="border : 1px solid black">
+                Merhaba bu bir p etiketidir
+            </p>
+
+            <pre style="background-color:black;color:white">
+
+&lt;p&gt;
+   Merhaba bu bir p etiketidir &lt;!--Not:Oradaki çerçeve  etiketin başının içinde style="border : 1px solid black" şu kodla çalışır--&gt;
+&lt; /p&gt;
+            </pre>
+        </div>
+        <div id="a">
+            <h3>a etiketi</h3>
+            <p>a etiketi bir bağlantıya gider köprü görevi görür</p>
+            <a href="https://minikodakademi.com/">Bu uzantı minikod akademiye gider</a>
+            <pre style="background-color:black;color:white">
+&lt;a href="https://minikodakademi.com/"&gt; <br />Bu uzantı minikod akademiye gider <br />&lt;/a&gt;
+            </pre>
+            <p>
+                Eğer HTML'de biraz gelişmisseniz ve temel etiketleri öğrendiyseniz.Şu sitede  (<a href="https://getbootstrap.com/">https://getbootstrap.com/</a>)sabit sınıflar vardır
+            </p>
+            <br />
+        </div>
+        <div id="brandhr">
+            <h3>br/ hr/</h3>
+            <p>Br etiketi çizgisi< alta geçirir.Hr etiketi aray çizgi koyar alta geçirir</p>
+            <p>br/</p>
+            <br />
+            <p>hr</p>
+            <hr />
+            <pre class="koddur">
+&lt;p&gt;br/&lt;/p&gt;
+&lt;br /&gt;
+&lt;p&gt;hr&lt;/p&gt;
+&lt;hr /&gt;
+</pre>
+        </div>
+        <div id="div">
+            <h3>div etiketi</h3>
+            <p>
+                HTML'de bir etiket vardır o da div etiketidir.Eğer daha önce C# yaptıysanız o etiketi Groupbox olarak düşünebilirsiniz.
+                Not:Alttaki örnekte divin kodunu görmek için Sağ Click+İncele yapmanız gerekecek
+            </p>
+            <div>
+                <p>
+                    Merhaba bu p etiketi div etiketi ile kaplıdır
+                </p>
+            </div>
+            <pre style="background-color: black; color: white">
+&lt;div&gt;             
+    &lt;p&gt;              
+    Mehaba bu p etiketi div etiketi ile kaplıdır
+    &lt;/p&gt;
+&lt;/div&gt;
+            </pre>
+        </div>
+        <div id="ulandol">
+            <h3>ul ve ol etiketleri</h3>
+
+            <p>
+                ul ve ol etikeleri HTML'de bir sıralama için kullanılan etiketlerdir.Bu etiketlerin içine li etiketi kullanarak sıralama öğeleri yapılmış olur.Fakat ul etiketi işaretlerle sıralama yaparken ol etiketi type ile sıralama yapar yani: A B C , a b c, 1 2 3, I. II. III. gibi sıralama yapar
+            </p>
+            <br />
+            <ul style="list-style-type:square">
+
+                <li>Çay</li>
+                <li>Kahve</li>
+                <li>Süt</li>
+            </ul>
+            <pre style="background-color:black;color:white">
+&lt;ul style="list-style-type:square"&gt;                
+   &lt;li&gt;Çay&lt;/li&gt;              
+   &lt;li&gt;Kahve &lt;/li&gt;                
+   &lt;li&gt;Süt&lt;/li&gt;                
+&lt;/ul&gt;
+            </pre>
+            <p>
+                Bazen bazı durumlarda ul içinde ul kullanılır örnek
+            </p>
+            <ul style="list-style-type:square">
+
+                <li>
+                    Çay
+                    <ul>
+                        <li>Demli çay</li>
+
+                        <li>Demsiz çay</li>
+                    </ul>
+                </li>
+
+                <li>Kahve</li>
+                <li>Süt</li>
+            </ul>
+            <pre style="background-color:black;color:white">
+&lt;ul style="list-style-type:square"&gt;
+    &lt;li&gt;Çay
+         &lt;ul&gt;  
+         &lt;li&gt;Demli çay &lt;/li&gt;
+         &lt;li&gt;Demsiz çay &lt;/li&gt;  
+     &lt;/ul&gt;                     
+    &lt;/li&gt;                
+    &lt;li&gt;Kahve &lt;/li&gt;                
+    &lt;li&gt;Süt&lt;/li&gt;                
+&lt;/ul&gt;
+            </pre>
+            <ol type="1">
+                <li>Çay</li>
+                <li>Kahve</li>
+                <li>Süt</li>
+            </ol>
+            <pre style="background-color:black;color:white">
+&lt;ol style="list-style-type:square"&gt;
+    &lt;li&gt;Çay                    
+    &lt;/li&gt;                
+    &lt;li&gt;Kahve &lt;/li&gt;                
+    &lt;li&gt;Süt&lt;/li&gt;                
+&lt;/ol&gt;
+            </pre>
+        </div>
+
+        <div id="bUTON">
+            <h3>button etiketi</h3>
+            <p>
+                ü
+                Button etiketi butondur.Eğer butonu bir bağlantı içinde yazarsanız bir uyarı verecektir button tıklama işlevi görürü
+            </p>
+            <button>
+                Buna tıkla
+            </button>
+            <pre class="koddur">
+&lt;button&gt;
+   Buna tıkla
+&lt;/button&gt;
+</pre>
+            <p>
+                Buttonlarınızı güzelleştirmek istiyorsanız head etiketinin içine style yazıp id veya class veya direkt ögeyi düzenleyebilirsiniz ya da bunları yapmadan <a href="https://getbootstrap.com/">Bootstrap'i</a> kullanabilirsiniz.Aşağıdaki kod Bootstrap'ten alınmıştır
+            </p>
+            <button type="button" class="btn btn-primary">Primary</button>
+            <button type="button" class="btn btn-secondary">Secondary</button>
+            <button type="button" class="btn btn-success">Success</button>
+            <button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-warning">Warning</button>
+            <button type="button" class="btn btn-info">Info</button>
+            <button type="button" class="btn btn-light">Light</button>
+            <button type="button" class="btn btn-dark">Dark</button>
+
+            <button type="button" class="btn btn-link">Link</button>
+            <pre class="koddur">
+&lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button type="button" class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
+&lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
+&lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt;
+&lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt;
+&lt;button type="button" class="btn btn-light"&gt;Light&lt;/button&gt;
+&lt;button type="button" class="btn btn-dark"&gt;Dark&lt;/button&gt;
+&lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;
+</pre>
+        </div>
+        <div id="img">
+            <h3>img</h3>
+            <p>
+                img etiketi bir resime tiketidir resmin bağlantısını(resmi yeni sekmede aça tıklandıktan sonra çıkan urlyi) ya da  eğer projede bir dosya oluşurulmuş ve bu dosyada resim varsa resmin uzantısı src'ye girilir örnek:
+
+            </p>
+            <img src="data:image/png;base64,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" />
+            <pre class="koddur">
+        &lt;img src="data:image/png;base64,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" /&gt;
+</pre>
+            <p>
+                Eğer resim gözükmezse alt koduna resim gözükmeyince çıkacak yazı yazılır.Bir not daha resim boyut ayarların <b>width ve weigth kodlarıyla yapılabilir</b>
+            </p>
+            <img src="ğoufujoejkf" alt="Bu bir alt kodudur" />
+            <pre>
+&lt;img src="ğoufujoejkf" alt="Bu bir alt kodudur" /&gt;
+</pre>
+        </div>
+
+        <div id="basliklar">
+            <h3>
+                Başlıklar(h1,h2,h3,h4,h5,h6)
+            </h3>
+            <p>
+                Bu etiket başlık yapar
+            </p>
+            <h1>
+                H1 başlığı
+            </h1>
+            <h2>
+                H2 başlığı
+            </h2>
+            <h3>
+                H3 başlığı
+            </h3>
+            <h4>
+                H4 başlığı
+            </h4>
+            <h5>
+                H5 başlığı
+            </h5>
+            <h6>
+                H6 başlığı
+            </h6>
+            <pre class="koddur">
+&lt;h1&gt;
+     H1 başlığı
+ &lt;/h1&gt;
+&lt;h2&gt;
+     H2 başlığı
+ &lt;/h2&gt;
+&lt;h3&gt;
+     H3 başlığı
+ &lt;/h3&gt;
+&lt;h4&gt;
+     H4 başlığı
+ &lt;/h4&gt;
+&lt;h5&gt;
+     H5 başlığı
+ &gt;/h5&lt;
+&lt;h6&gt;
+     H6 başlığı
+ &lt;/h6&gt;
+</pre>
+        </div>
+        <div id="textcoloreffect">
+            <h3>Yazı ve renk etiketleri</h3>
+            <p>Aşağıda kodları yorum satırlarında ne işe yaradıkları yazacaktır</p>
+            <div>
+                <b>
+                    kalın metin <br /> <!--kalın metin-->
+                </b>
+                <i>italik metin</i> <!--italik metin-->
+                <br />
+                <em>
+                    vurgulanan metin <!--vurgulanan metin-->
+                </em>
+                <br />
+                <small>küçük metin</small> <!--küçük metin-->
+                <br />
+                <mark>oldu mu</mark> <!--fosforla çizer-->
+                <br />
+                <p>
+                    Selam <mark>TÜRK</mark> kardeşim
+                </p>
+                <br />
+                <p>
+                    Selam <del>Yüzmen</del> kardeşim <!--üstünü çizer-->
+                </p>
+                <br />
+                <p>
+                    Selam <del>Bulgar</del> <ins> TÜRKÜ</ins> kardeşim <!--altınıçizer-->
+                </p>
+                <br />
+                <p>
+                    Bu bir <sub>alt metin</sub> örneğidir <!--alt metin-->
+                </p>
+                <br />
+                <p>
+                    BU bir <sup>üst metin</sup> örneğidir <!--üst metin-->
+                </p>
+                <pre>
+            TÜRKLÜK   =   NAMUS,ŞEREF
+        </pre>
+                <pre>
+TÜRKLÜK   =   NAMUS,ŞEREF
+        </pre>
+                <p title="TÜRKLER DEDİKİ :TÜRKLÜK NAMUS VE ŞEREFTİR ">
+                    <!--ÜSTÜNE GELİNCE TIRNAK İÇİNDEKİ ŞEYİ SÖYLER-->
+                    TÜRKLÜK NAMUS VE ŞEREFTİR
+                </p>
+            </div>
+            <pre class="koddur">
+    &lt;div&gt;
+        &lt;b&gt;
+            kalın metin &lt;br /&gt; &lt;!--kalın metin--&gT;
+        &lt;/b&gt;
+        &gt;i&lt;italik metin&lt;/i&gt; &lt;!--italik metin--&gt;
+        &lt;br /&gt;
+        &lt;em&gt;
+            vurgulanan metin &lt;!--vurgulanan metin--&gt;
+        &lt;/em&gt;
+        &lt;br /&gt;
+        &lt;small&gt;küçük metin&lt;/small&gt; &lt;!--küçük metin--&gt;
+        &gt;br /&gt;
+        &lt;mark&gt;oldu mu&lt;/mark&gt; &lt;!--fosforla çizer--&gt;
+        &lt;br /&gt;
+        &lt;p&gt;
+            Selam &lt;mark&gt;TÜRK&lt;/mark&gt; kardeşim
+        &lt;/p&gt;
+        &lt;br /&gt;
+        &lt;p&gt;
+            Selam &lt;del&gt;Yüzmen&lt;/del&gt; kardeşim &lt;!--üstünü çizer--&gt;
+        &lt;/p&gt;
+        &lt;br /&gt;
+        &lt;p&gt;
+            Selam &lt;del&gt;Bulgar&lt;/del&gt; &lt;ins&gt; TÜRKÜ&lt;/ins&gt; kardeşim &lt;!--altını çizer--&gt;
+        &lt;/p&gt;
+        &lt;br /&gt;
+        &lt;p&gt;
+            Bu bir &lt;sub&gt;alt metin&lt;/sub&gt; örneğidir &lt;!--alt metin--&gt;
+        &lt;/p&gt;
+        &lt;br /&gt;
+        &lt;p&gt;
+            BU bir &lt;sup&gt;üst metin&lt;/sup&gt; örneğidir &lt;!--üst metin--&gt;
+        &lt;/p&gt;
+        &lt;pre&gt;
+            TÜRKLÜK   =   NAMUS,ŞEREF
+        &lt;/pre&gt;
+        &lt;pre&gt;
+TÜRKLÜK   =   NAMUS,ŞEREF
+        &lt;/pre&gt;
+        &lt;p title="TÜRKLER DEDİKİ :TÜRKLÜK NAMUS VE ŞEREFTİR "&gt;
+            &lt;!--ÜSTÜNE GELİNCE TIRNAK İÇİNDEKİ ŞEYİ SÖYLER--&gT;
+            TÜRKLÜK NAMUS VE ŞEREFTİR
+        &lt;/p&gt;
+    &lt;/div&gt;
+</pre>
+        </div>
+        <div id="tablo">
+            <h3>table, tr,td, th</h3>
+            <p>
+                Bu bir tablo içeriğidir tablo verilerini yazar.Table tablo,TR, td ve th bunun içine yazılır,td=table data  tablo verisi,th table header tablo başlığı
+            </p>
+            <table>
+                <tr>
+                    <th style="border : 2px solid black">
+                        1. TH
+                    </th>
+                    <th style="border : 2px solid black">
+                        2. TH
+                    </th>
+                    <th style="border : 2px solid black">
+                        3. TH
+                    </th>
+                </tr>
+                <tr>
+                    <td style="border : 2px solid black">
+                        1. TD
+                    </td>
+                    <td style="border : 2px solid black">
+                        2. TD
+                    </td>
+                    <td style="border : 2px solid black">
+                        3. TD
+                    </td>
+
+                </tr>
+                <tr>
+                    <td style="border : 2px solid black">
+                        4. TD
+                    </td>
+                    <td style="border : 2px solid black">
+                        5. TD
+                    </td>
+                    <td style="border : 2px solid black">
+                        6. TD
+                    </td>
+                </tr>
+            </table>
+<pre class="koddur">
+&lt;table&gt;
+        &lt;tr&gt;
+        &lt;th style="border : 2px solid black"&gt;
+              1. TH
+          &lt;/th&gt;
+        &lt;th style="border : 2px solid black"&gt;
+              2. TH
+          &lt;/th&gt;
+        &lt;th style="border : 2px solid black"&gt;
+              3. TH
+          &lt;/th&gt;
+      &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td style="border : 2px solid black"&gt;
+              1. TD
+          &lt;/td&gt;
+        &lt;td style="border : 2px solid black"&gt;
+              2. TD
+          &lt;/td&gt;
+        &lt;td style="border : 2px solid black"&gt;
+              3. TD
+          &lt;/td&gt;
+         
+      &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td style="border : 2px solid black"&gt;
+              4. TD
+          &lt;/td&gt;
+        &lt;td style="border : 2px solid black"&gt;
+              5. TD
+          &lt;/td&gt;
+        &lt;td style="border : 2px solid black"&gt;
+              6. TD
+          &lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/table&gt;
+</pre>
+        </div>
+        <div id="bootstrap">
+            <h3>HTML içi CSS(BOOTSTRAP)</h3>
+            <p>
+                HTML içi CSS şöyle yapılır(link kullanmadan) headın içine style yazarak yapılır.Yukarıda yaptığımız table etiketinin daha kolay yolu şudur
+            </p>
+            <table>
+                <tr>
+                    <th>
+                        1. TH
+                    </th>
+                    <th>
+                        2. TH
+                    </th>
+                    <th>
+                        3. TH
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        1. TD
+                    </td>
+                    <td>
+                        2. TD
+                    </td>
+                    <td>
+                        3. TD
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        4. TD
+                    </td>
+                    <td>
+                        5. TD
+                    </td>
+                    <td>
+                        6. TD
+                    </td>
+                </tr>
+            </table>
+            <pre class="koddur">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+        &lt;meta charset="utf-8" /&gt;
+        &lt;title&gt;HTML&lt;/title&gt;
+    
+       
+        &lt;style&gt;
+
+            td, th {
+                border: 2px solid black;
+            }
+        &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+        &lt;table&gt;
+        &lt;tr&gt;
+        &lt;th&gt;
+              1. TH
+          &lt;/th&gt;
+        &lt;th&gt;
+              2. TH
+          &lt;/th&gt;
+        &lt;th &gt;
+              3. TH
+          &lt;/th&gt;
+      &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td &gt;
+              1. TD
+          &lt;/td&gt;
+        &lt;td&gt;
+              2. TD
+          &lt;/td&gt;
+        &lt;td&gt;
+              3. TD
+          &lt;/td&gt;
+         
+      &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td &gt;
+              4. TD
+          &lt;/td&gt;
+        &lt;td &gt;
+              5. TD
+          &lt;/td&gt;
+        &lt;td&gt;
+              6. TD
+          &lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/body&gt;
+&lt;html&gt;
+</pre>
+        </div>
+        <div id="navbar">
+            <h3>Navbar etiketi</h3>
+            <p>
+                Navbar  sabit sekme kısmı için yapılmıştır aşağıdaki örnekte navbar kodu <a href="https://getbootstrap.com/">Bootstrap'ten alınmıştır</a>.NOT:Bu navbarı yapabilmek için &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"&gt; kodunu title etiketinin altına ;
+
+                &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"&gt;&lt;/script&gt; kodunu body etiketinin hemen üstüne yazın
+            </p>
+            <br />
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+            <br />
+
+            <pre style="background-color:black;color:white">
+        &lt;nav class="navbar navbar-expand-lg bg-body-tertiary"&gt;
+            &lt;div class="container-fluid"&gt;
+                &lt;a class="navbar-brand" href="#"&gt;Navbar&lt;/a&gt;
+                &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"&gt;
+                    &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+                &lt;/button&gt;
+                &lt;div class="collapse navbar-collapse" id="navbarSupportedContent"&gt;
+                    &lt;ul class="navbar-nav me-auto mb-2 mb-lg-0"&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link active" aria-current="page" href="#"&gt;Home&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item"&gt;
+                            &lt;a class="nav-link" href="#"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li class="nav-item dropdown"&gt;
+                            &lt;a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+                                Dropdown
+                            &lt;/a&gt;
+                            &lt;ul class="dropdown-menu"&gt;
+                                &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&gt;a class="dropdown-item" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;hr class="dropdown-divider"&gt;&lt;/li&gt;
+                                &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+                            &lt;ul&gt;
+                        &lt;/li&gt;
+                       &lt;li class="nav-item"&gt;
+                           &lt;a class="nav-link disabled" aria-disabled="true"&gt;Disabled&lt;/a&gt;
+                       &lt;/li&gt;
+                    &lt;/ul&gt;
+                  &lt;form class="d-flex" role="search"&gt;
+                        &lt;input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"&gt;
+                  &lt;button&gt; class="btn btn-outline-success" type="submit">Search&lt;/button&gt;
+             &lt;/form&gt;
+         &lt;/div&gt;
+     &lt;/div&gt;
+&lt;/nav&gt;
+</pre>
+        </div>
+        <div id="map">
+            <h3>map etiketi</h3>
+            <p>Resmin belli konumlarına göre bağlantı yapar koordinatlı a etiketi gibi düşünebilirsin.</p>
+            <img src="data:image/png;base64,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" alt="Resim" usemap="#tr" style="width: 500px; height: 500px" />
+            <map name="tr">
+                <area shape="circle" title="HtmlPage daire" coords="100,100,50" alt="TR" href="Anasayfa.html" /><!--x,y,yarıçap-->
+                <area shape="rect" title="HtmlPage dikdörtgen" coords="0, 0, 150,150" alt="TR1" href="HTMLYAZILIMDILI.html" />
+            </map>
+
+            <pre class="koddur">
+&lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAkFBMVEXjChf////jAA/oTVPiAAD0tLbjAA3jABLiAAXiAAPiAAn+9/f2wML75eb98PH629zwkpX74OHqX2TlLjbqZWnpVlvnQEfte3/97u/1u73zrK7kEh7lIivypKb519jsdXnuiYzkHCb4ztD3xsjoR03xn6LmO0Lrb3PlKTDlMznvj5LtgYXzr7HwmJv50tTqYmdUNe09AAAF7UlEQVR4nO2ca1vyMAyGxwgrjIPoOAhDTiKiCP7/f/d2AxR907lBgDKe+xsedmUPaZukaR0HAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADnQnmeXy77nqsubYkNuKTxF53iQ+uzPXtz4o+XNuqCKP3+b93+ulH4pnrXey/qn7uXNu4iEDnd2r4cewxXc6JbG0faRUZTXo8t9dXgpgaRS4N+NVGRmGmbKpc29UwoWvT+FiTmvnUbvkJOKaUiEXfF/M8rHo0zKBJR8+jSRp8WCu4ySqJ5zbWr0DKFBNWG5scUXCPv0pafCpdqyWo81pqtIA5libxFe1yq734R5HT8lJ16kiDDcaClKO9SHqV8/TEcPW9++5lLUShICEkaqwkbz0fhf/c++otlDkWhjlmR+mtCJK9lKUYh7yp3oiRI0hjRH6/r0+wuf6L4gVGSp78Uif+fuoXCOFeiKNc0lzx2Ur4oOVMdqJzWzLNCphWnlj6fUdQsdPKT/ZAp52tm+uLpoerlJaKN5gKWrGOBOs85GT3uxCDJQ+YXrMy75VOYeHbIkPa1DvjOvSCUN/D8mPK+wwLTXMwninhJ+jmZGQ6B+qwkdzKSXKXbqJB3k1BiA4f64TWKQnzxtSviJtQTcrezolxWkqHMq2jBs0V9VkAvrCZvMrXEyAmvL9wnNvfrCX25kSaNa3OUcot1k4HQzBhPVrUrE4WeOUnE3mIzgcvM12eDj9dmUjsT20Vt8ft5Xpoy1YWosEOnLmbwVpOfD/SJOn17o2Q+OJFbPnfP/1ZAC1LsNwpVayUxlNekZtg9zTdVhzJRuxR3+cysXaBV+bRDZ88PlaoQPZS2K7/FFX5+Jf44hSZDan3XN4Wi5JNAK04TweK7IZmyuWjLl6YnchbzmmQvaZ4RuudMlrNY0QfzfHuX4QjiOj3vhUxWROGYWdcEp/BTwEaxIrsRLtGgyZe+B3Z3G7OaHL/s6Mh9sWKHpWZkt5uoCWf003FGa0HmL+beHtuTZMX2ErwcZTV1nh6NglxBMcV948w+KsYM/2iIs75scBI/oS5bktmhLA7XIvj55NjwgYhGZlmsr+Oz607peKu1LC3TILI4/YthNZmKGB1lwT22/j2zu/GAuCVCLM4sExWZsK1qdyM632Qh6NxsvmN32w6fFwdywTefF1vdXUxNzmTBGGJPk/3QNrD4xIL/wGkitQno7GvSqyyaXynQo9WOwmkiGH9/aaKfGaXK78PNR4H1/mTwRaW5mGt/aTKP6/SKyBmvo8+HtMqdCb5H6cjMeP/5W03ev56oZfGWU8n9Emn8NqeJ3IbUVpP1jwdGx1uWx2VVJ4VvtfiUCjU3mjBRmsX7xYYAYi1l8ebxbYsFYPCLnCaFjtAsG2siNz2dCTblEXOUSBOpfYDzYThh3ZaZUSJNJnbX6Tn4rhyhSFNrco3HnAyNjzJrJfVsr9OzmNrt5xIdImR7Vc0AnxzrDEUi0rS7pmaG3TWWqkFeKRW2YnBoXGFtHpMN080N7weIQrNcnPPS06zhcHF2Uaj1am33XjaITY8L2VdkehUs0l0YvrGtENUhs0Sh9G51VTEjfN+95n6S+i19PS+JnA6zBePh/MIopatQ57GQ9m6D60AZohTNdJAifKOojGl1Q+MBeKFRlOi2j2RViJZV0cZaS/DChAajl9B8v4WnFYn+1eJa/MF4/M7GllqbqPK/t/hE883VkFdWYUyJMq4+MY1SK76GzFMxbjn60H7aTM6Nt1xK4iTEKTvqveZrZxE6KhzMW+PSV1/COsdXYVIxxRWp/9O0u6fkSCrGK3MSnCdfYcn/KGon3ubHOYnFrRNClGmcYQCVwpw7yRaiZkpVekGuZ5If7C5xTKT6NLmtK92jQ8DmaF/z3Lq929yjmH22GrKDqP6hBbmVK8t/oWWh2fJjWt8pU22se812SHStmxQyePGtwu4kCILB5oph/+aGDE+U4CjbD1UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiHHBb5wi+M0/4etGJMOkcVsAAAAASUVORK5CYII=" alt="Resim" usemap="#tr" style="width: 500px; height: 500px" /&gt;
+&lt;map name="tr"&gt;
+        &lt;area shape="circle" title="HtmlPage daire" coords="100,100,50" alt="TR" href="Anasayfa.html" /&gt;<!--x,y,yarıçap-->
+        &lt;area shape="rect" title="HtmlPage dikdörtgen" coords="0, 0, 150,150" alt="TR1" href="HTMLYAZILIMDILI.html" /&gt;
+&lt;/map&gt;
+</pre>
+
+        </div>
+        <div id="picture">
+            <h3>picture etiketi</h3>
+            <p>
+                Bu etiket boyutlara göre resim değiştir denemek için sayfayı küçült'e tıklayın ve resmi dikkatli bakın öncekiyle aynı mı?Eğer olmazsa sol kenardan sağ sol yapıp boyutlandırın
+            </p>
+            <picture>
+                <source media="(min-width:995px)" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAkFBMVEXjChf////jAA/oTVPiAAD0tLbjAA3jABLiAAXiAAPiAAn+9/f2wML75eb98PH629zwkpX74OHqX2TlLjbqZWnpVlvnQEfte3/97u/1u73zrK7kEh7lIivypKb519jsdXnuiYzkHCb4ztD3xsjoR03xn6LmO0Lrb3PlKTDlMznvj5LtgYXzr7HwmJv50tTqYmdUNe09AAAF7UlEQVR4nO2ca1vyMAyGxwgrjIPoOAhDTiKiCP7/f/d2AxR907lBgDKe+xsedmUPaZukaR0HAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADnQnmeXy77nqsubYkNuKTxF53iQ+uzPXtz4o+XNuqCKP3+b93+ulH4pnrXey/qn7uXNu4iEDnd2r4cewxXc6JbG0faRUZTXo8t9dXgpgaRS4N+NVGRmGmbKpc29UwoWvT+FiTmvnUbvkJOKaUiEXfF/M8rHo0zKBJR8+jSRp8WCu4ySqJ5zbWr0DKFBNWG5scUXCPv0pafCpdqyWo81pqtIA5libxFe1yq734R5HT8lJ16kiDDcaClKO9SHqV8/TEcPW9++5lLUShICEkaqwkbz0fhf/c++otlDkWhjlmR+mtCJK9lKUYh7yp3oiRI0hjRH6/r0+wuf6L4gVGSp78Uif+fuoXCOFeiKNc0lzx2Ur4oOVMdqJzWzLNCphWnlj6fUdQsdPKT/ZAp52tm+uLpoerlJaKN5gKWrGOBOs85GT3uxCDJQ+YXrMy75VOYeHbIkPa1DvjOvSCUN/D8mPK+wwLTXMwninhJ+jmZGQ6B+qwkdzKSXKXbqJB3k1BiA4f64TWKQnzxtSviJtQTcrezolxWkqHMq2jBs0V9VkAvrCZvMrXEyAmvL9wnNvfrCX25kSaNa3OUcot1k4HQzBhPVrUrE4WeOUnE3mIzgcvM12eDj9dmUjsT20Vt8ft5Xpoy1YWosEOnLmbwVpOfD/SJOn17o2Q+OJFbPnfP/1ZAC1LsNwpVayUxlNekZtg9zTdVhzJRuxR3+cysXaBV+bRDZ88PlaoQPZS2K7/FFX5+Jf44hSZDan3XN4Wi5JNAK04TweK7IZmyuWjLl6YnchbzmmQvaZ4RuudMlrNY0QfzfHuX4QjiOj3vhUxWROGYWdcEp/BTwEaxIrsRLtGgyZe+B3Z3G7OaHL/s6Mh9sWKHpWZkt5uoCWf003FGa0HmL+beHtuTZMX2ErwcZTV1nh6NglxBMcV948w+KsYM/2iIs75scBI/oS5bktmhLA7XIvj55NjwgYhGZlmsr+Oz607peKu1LC3TILI4/YthNZmKGB1lwT22/j2zu/GAuCVCLM4sExWZsK1qdyM632Qh6NxsvmN32w6fFwdywTefF1vdXUxNzmTBGGJPk/3QNrD4xIL/wGkitQno7GvSqyyaXynQo9WOwmkiGH9/aaKfGaXK78PNR4H1/mTwRaW5mGt/aTKP6/SKyBmvo8+HtMqdCb5H6cjMeP/5W03ev56oZfGWU8n9Emn8NqeJ3IbUVpP1jwdGx1uWx2VVJ4VvtfiUCjU3mjBRmsX7xYYAYi1l8ebxbYsFYPCLnCaFjtAsG2siNz2dCTblEXOUSBOpfYDzYThh3ZaZUSJNJnbX6Tn4rhyhSFNrco3HnAyNjzJrJfVsr9OzmNrt5xIdImR7Vc0AnxzrDEUi0rS7pmaG3TWWqkFeKRW2YnBoXGFtHpMN080N7weIQrNcnPPS06zhcHF2Uaj1am33XjaITY8L2VdkehUs0l0YvrGtENUhs0Sh9G51VTEjfN+95n6S+i19PS+JnA6zBePh/MIopatQ57GQ9m6D60AZohTNdJAifKOojGl1Q+MBeKFRlOi2j2RViJZV0cZaS/DChAajl9B8v4WnFYn+1eJa/MF4/M7GllqbqPK/t/hE883VkFdWYUyJMq4+MY1SK76GzFMxbjn60H7aTM6Nt1xK4iTEKTvqveZrZxE6KhzMW+PSV1/COsdXYVIxxRWp/9O0u6fkSCrGK3MSnCdfYcn/KGon3ubHOYnFrRNClGmcYQCVwpw7yRaiZkpVekGuZ5If7C5xTKT6NLmtK92jQ8DmaF/z3Lq929yjmH22GrKDqP6hBbmVK8t/oWWh2fJjWt8pU22se812SHStmxQyePGtwu4kCILB5oph/+aGDE+U4CjbD1UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiHHBb5wi+M0/4etGJMOkcVsAAAAASUVORK5CYII=" />
+                <source media="(min-width:650px)" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQQAAACCCAMAAACXSEZJAAAAgVBMVEUAteJQni/vM0D///8Au+nBZX7IWztCoy7yL0DzLjnvLDrvLjzvKDfvMT7uFiruGizuIjLvN0T++PjwRVD96uv5v8LxV2D2m5/84OH1j5T0gYf3q6/zdn3+8/T4sLPyY2vzcHf72dvxTVf0h4370tT3o6jtABP6yczuByLyaXH4uLusO8JMAAACy0lEQVR4nO2aWZeiMBBGCfQ2kE1EBJd2b9H//wMHawDlCE6/dKWPfPfFI+IhuWSpVOJ5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA45QW8eK/g1fvjCGuM1sa6enwLz3dAZM1otZvOD/l6bE2oXJThFgcSQp3Os6AmmZysdKyBXYIyq33QJslNyF2MFtwSpDreVD/OSuJSw8owl6MFswRzihsDmzwNdYlM801w0A67BK8EkzcKJttCRlRxFclie9w7HBhYJehpMwykOrr9JdKnibtZglOCnTXN4H4kDP1Z1PUnDhglROPawbzoeOlKjeiqg4mCUYKug4NJ0X3DPwcLfgt8EmQ9KGaPJoJovOxR9IOwSVCmnhy33a9a0WV7CNKo+cYEmwS5qxycu+MitV0YWfaZJPi0vrJyJ7lKxihBbyoJo57OoJNsYWwaBMvChtN4brlKxidBjSoH+74AOVyU4cPss7xlfSh7TsQYNXBJkHWM0N/My55whbMhsEmwn1Xtxr1vuBk1HnWaH4FLgqnWz3HvclHJr2tTOH9xBtFcEooqUsp65gapR/nm2hDi40LyJRnYJCyr9XOnBNUy0Hjgagy/WgLXigrdwcfASPymKXJ2bQnPOUWGCJZuw2bdc8cAwmYsoC58Yymtn34prXQVKQw5qXJtCg/Ta+qp02s3idbzo2o+d6L1Gyl3+nzulPv/Nl/Ylgp3sG7DGWzD+Y82ZPeD2ZC925qPLueWwjTPgvlwtubLidKf3OYMkixLBndI47ITld4d19kN7LiOf39wa20ZI+ROcISvxPtwRCittVK6enwL7w28ee/g3RNAQIKABAISBCQQkCAggYAEAQkEJAhIICBBQAIBCQISCEgQkEBAgoAEAhIEJBCQICCBgAQBCQQkCEggIEFAAgEJAhIISBCQQECCgAQCEgQkEJAgIIGABAEJBCSU/AUjFcmZBagVLAAAAABJRU5ErkJggg==" />
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAMAAADUMSJqAAAAbFBMVEX////jChfhAADypKbmOT71t7npZWbjAA7iAATjABL98fH+9fbkKi3+9/fiAAn97/DseHr2xMbvk5X63N3tgYPkGB/ujI7yqavmQUXpX2H86en4ztDzsbLnSU7kICTxnp/lNDfqa2351dfoUlXn9hi3AAACmElEQVRoge1Y2XKrMAwFsZjF7DsU4sD//2NNE7DTgWuH5Xba4Txk8qA5kY+kYyuKcuHChX3QT4SCToSinoiL/K+Rw4lQjBPx0wbxu+B6p9AmH2GLcddh3bxF7qHMMaEd5NsjEP2WVdFh1HcL0MsU2ADkkIbyUgCe1/+aA9+Hst/N3WCOGo2KhHmehlVGfyHeyV1wgiAgeT/V0k1iHapdlY3BZjqX32T2opIEe7jntC2/WAgo2s3sH4wbymQxJEk3jlXCNFlXN9jYkrrPuNfzc50t3Nosiq/vqNsiPE4UiXEJ3jKE25y41LAEpH6DfE7cxjKj4mSDPHfEEtdk4h38hhukE7ltS1XTwQiesrvNTRCMJ1XgLpWMg22EaRpOExIQyc96fGnsF8npOER3TN1S2DizGcLy3H+HOx7VAtoGkAqDmatISV4Xs8Pp4ujZxHWxMyXagOb6CwXnyUsBeZKX9NZjB5UxMnlyrVKBswqZ+k/BNhHPZ22Y3URvyzQAS0XKUgMjm45KxNFbWxGpEAqD2RBJWctjiO59qtMhEtaUTLpYpiw5Gsvj9bR7RN2Ys3tIyqhH42qe33tRxzTMckUe9ySXi3sAzZdFJ2MATlbJc/PXXC4RHpRvXeIWa/VGHB1IxHAo5tS/boGD0TJh2vUxdTY9ipSaE2ZYy73eumFEnNmR5YdRL7521sBedKoP8YL3xsOO3VFjudPki1f39Yyu3bVaGMia2RFkYeQ8UvWCJu3gvnPnTXQueboiQmmGYWiW40on55f/RGxz9DR/a9wU6efwzstzFXWqAuL5xxO0h+3QdVGOiqBxOx+XXJzuX3Bf+I240jHGZAg/jmW+8F+gnYhz/7RUT8RF/tfIrROhmCfipw3iwoVfj0/Ily2AoVfitgAAAABJRU5ErkJggg==" style="width:auto" />
+            </picture>
+            <pre class="koddur">
+&lt;picture&gt;
+        &lt;source media="(min-width:995px)" srcset="data:image/png;base64,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" /&gt;
+        &lt;source media="(min-width:650px)" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQQAAACCCAMAAACXSEZJAAAAgVBMVEUAteJQni/vM0D///8Au+nBZX7IWztCoy7yL0DzLjnvLDrvLjzvKDfvMT7uFiruGizuIjLvN0T++PjwRVD96uv5v8LxV2D2m5/84OH1j5T0gYf3q6/zdn3+8/T4sLPyY2vzcHf72dvxTVf0h4370tT3o6jtABP6yczuByLyaXH4uLusO8JMAAACy0lEQVR4nO2aWZeiMBBGCfQ2kE1EBJd2b9H//wMHawDlCE6/dKWPfPfFI+IhuWSpVOJ5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA45QW8eK/g1fvjCGuM1sa6enwLz3dAZM1otZvOD/l6bE2oXJThFgcSQp3Os6AmmZysdKyBXYIyq33QJslNyF2MFtwSpDreVD/OSuJSw8owl6MFswRzihsDmzwNdYlM801w0A67BK8EkzcKJttCRlRxFclie9w7HBhYJehpMwykOrr9JdKnibtZglOCnTXN4H4kDP1Z1PUnDhglROPawbzoeOlKjeiqg4mCUYKug4NJ0X3DPwcLfgt8EmQ9KGaPJoJovOxR9IOwSVCmnhy33a9a0WV7CNKo+cYEmwS5qxycu+MitV0YWfaZJPi0vrJyJ7lKxihBbyoJo57OoJNsYWwaBMvChtN4brlKxidBjSoH+74AOVyU4cPss7xlfSh7TsQYNXBJkHWM0N/My55whbMhsEmwn1Xtxr1vuBk1HnWaH4FLgqnWz3HvclHJr2tTOH9xBtFcEooqUsp65gapR/nm2hDi40LyJRnYJCyr9XOnBNUy0Hjgagy/WgLXigrdwcfASPymKXJ2bQnPOUWGCJZuw2bdc8cAwmYsoC58Yymtn34prXQVKQw5qXJtCg/Ta+qp02s3idbzo2o+d6L1Gyl3+nzulPv/Nl/Ylgp3sG7DGWzD+Y82ZPeD2ZC925qPLueWwjTPgvlwtubLidKf3OYMkixLBndI47ITld4d19kN7LiOf39wa20ZI+ROcISvxPtwRCittVK6enwL7w28ee/g3RNAQIKABAISBCQQkCAggYAEAQkEJAhIICBBQAIBCQISCEgQkEBAgoAEAhIEJBCQICCBgAQBCQQkCEggIEFAAgEJAhIISBCQQECCgAQCEgQkEJAgIIGABAEJBCSU/AUjFcmZBagVLAAAAABJRU5ErkJggg==" /&gt;
+        &lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAMAAADUMSJqAAAAbFBMVEX////jChfhAADypKbmOT71t7npZWbjAA7iAATjABL98fH+9fbkKi3+9/fiAAn97/DseHr2xMbvk5X63N3tgYPkGB/ujI7yqavmQUXpX2H86en4ztDzsbLnSU7kICTxnp/lNDfqa2351dfoUlXn9hi3AAACmElEQVRoge1Y2XKrMAwFsZjF7DsU4sD//2NNE7DTgWuH5Xba4Txk8qA5kY+kYyuKcuHChX3QT4SCToSinoiL/K+Rw4lQjBPx0wbxu+B6p9AmH2GLcddh3bxF7qHMMaEd5NsjEP2WVdFh1HcL0MsU2ADkkIbyUgCe1/+aA9+Hst/N3WCOGo2KhHmehlVGfyHeyV1wgiAgeT/V0k1iHapdlY3BZjqX32T2opIEe7jntC2/WAgo2s3sH4wbymQxJEk3jlXCNFlXN9jYkrrPuNfzc50t3Nosiq/vqNsiPE4UiXEJ3jKE25y41LAEpH6DfE7cxjKj4mSDPHfEEtdk4h38hhukE7ltS1XTwQiesrvNTRCMJ1XgLpWMg22EaRpOExIQyc96fGnsF8npOER3TN1S2DizGcLy3H+HOx7VAtoGkAqDmatISV4Xs8Pp4ujZxHWxMyXagOb6CwXnyUsBeZKX9NZjB5UxMnlyrVKBswqZ+k/BNhHPZ22Y3URvyzQAS0XKUgMjm45KxNFbWxGpEAqD2RBJWctjiO59qtMhEtaUTLpYpiw5Gsvj9bR7RN2Ys3tIyqhH42qe33tRxzTMckUe9ySXi3sAzZdFJ2MATlbJc/PXXC4RHpRvXeIWa/VGHB1IxHAo5tS/boGD0TJh2vUxdTY9ipSaE2ZYy73eumFEnNmR5YdRL7521sBedKoP8YL3xsOO3VFjudPki1f39Yyu3bVaGMia2RFkYeQ8UvWCJu3gvnPnTXQueboiQmmGYWiW40on55f/RGxz9DR/a9wU6efwzstzFXWqAuL5xxO0h+3QdVGOiqBxOx+XXJzuX3Bf+I240jHGZAg/jmW+8F+gnYhz/7RUT8RF/tfIrROhmCfipw3iwoVfj0/Ily2AoVfitgAAAABJRU5ErkJggg==" style="width:auto" /&gt;
+ &lt;/picture&gt;
+</pre>
+        </div>
+        <div id="input">
+            <h3>İnput</h3>
+            <p>Input'u HTML'in textBox (Veri girişi yapılan kutu) olarak düşünebilirsiniz.Bunun bir çok çeşidi vardır.<a href="https://getbootstrap.com/docs/5.3/components/modal/#">Aşağıda Bootstrap kullanılmıştır</a></p>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Default checkbox
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                    Checked checkbox
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                    Indeterminate checkbox
+                </label>
+            </div>
+
+
+
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminateDisabled" disabled>
+                <label class="form-check-label" for="flexCheckIndeterminateDisabled">
+                    Disabled indeterminate checkbox
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
+                <label class="form-check-label" for="flexCheckDisabled">
+                    Disabled checkbox
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled>
+                <label class="form-check-label" for="flexCheckCheckedDisabled">
+                    Disabled checked checkbox
+                </label>
+            </div>
+
+
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Default radio
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                    Default checked radio
+                </label>
+            </div>
+
+
+
+
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled>
+                <label class="form-check-label" for="flexRadioDisabled">
+                    Disabled radio
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" checked disabled>
+                <label class="form-check-label" for="flexRadioCheckedDisabled">
+                    Disabled checked radio
+                </label>
+            </div>
+
+
+
+
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
+                <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
+                <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
+            </div>
+
+
+
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                    Default checkbox
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+                <label class="form-check-label" for="defaultCheck2">
+                    Disabled checkbox
+                </label>
+            </div>
+
+
+
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                    Default radio
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">
+                    Second default radio
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+                <label class="form-check-label" for="exampleRadios3">
+                    Disabled radio
+                </label>
+            </div>
+
+
+
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                <label class="form-check-label" for="inlineCheckbox1">1</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                <label class="form-check-label" for="inlineCheckbox2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+                <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+            </div>
+
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">1</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+                <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+            </div>
+
+
+            <div class="form-check form-check-reverse">
+                <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
+                <label class="form-check-label" for="reverseCheck1">
+                    Reverse checkbox
+                </label>
+            </div>
+            <br />
+            <div class="form-check form-check-reverse">
+                <input class="form-check-input" type="checkbox" value="" id="reverseCheck2" disabled>
+                <label class="form-check-label" for="reverseCheck2">
+                    Disabled reverse checkbox
+                </label>
+            </div>
+            <br />
+            <div class="form-check form-switch form-check-reverse">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
+                <label class="form-check-label" for="flexSwitchCheckReverse">Reverse switch checkbox input</label>
+            </div>
+
+
+            <br />
+
+
+
+            <div>
+                <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+            </div>
+
+            <div>
+                <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="...">
+            </div>
+            <br />
+
+
+            <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+            <label class="btn btn-primary" for="btn-check">Single toggle</label>
+            <br />
+            <input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
+            <label class="btn btn-primary" for="btn-check-2">Checked</label>
+            <br />
+            <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off" disabled>
+            <label class="btn btn-primary" for="btn-check-3">Disabled</label>
+
+            <br />
+
+            <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off">
+            <label class="btn" for="btn-check-4">Single toggle</label>
+            <br />
+            <input type="checkbox" class="btn-check" id="btn-check-5" checked autocomplete="off">
+            <label class="btn" for="btn-check-5">Checked</label>
+            <br />
+            <input type="checkbox" class="btn-check" id="btn-check-6" autocomplete="off" disabled>
+            <label class="btn" for="btn-check-6">Disabled</label>
+            <br />
+
+
+            <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+            <label class="btn btn-secondary" for="option1">Checked</label>
+            <br />
+            <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+            <label class="btn btn-secondary" for="option2">Radio</label>
+            <br />
+            <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" disabled>
+            <label class="btn btn-secondary" for="option3">Disabled</label>
+            <br />
+            <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+            <label class="btn btn-secondary" for="option4">Radio</label>
+            <br />
+
+
+            <input type="radio" class="btn-check" name="options-base" id="option5" autocomplete="off" checked>
+            <label class="btn" for="option5">Checked</label>
+
+            <input type="radio" class="btn-check" name="options-base" id="option6" autocomplete="off">
+            <label class="btn" for="option6">Radio</label>
+
+            <input type="radio" class="btn-check" name="options-base" id="option7" autocomplete="off" disabled>
+            <label class="btn" for="option7">Disabled</label>
+
+            <input type="radio" class="btn-check" name="options-base" id="option8" autocomplete="off">
+            <label class="btn" for="option8">Radio</label>
+
+
+            <br />
+
+
+
+
+            <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+            <label class="btn btn-outline-primary" for="btn-check-outlined">Single toggle</label><br>
+
+            <input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off">
+            <label class="btn btn-outline-secondary" for="btn-check-2-outlined">Checked</label><br>
+
+            <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+            <label class="btn btn-outline-success" for="success-outlined">Checked success radio</label>
+
+            <input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
+            <label class="btn btn-outline-danger" for="danger-outlined">Danger radio</label>
+
+            <pre class="koddur">
+&lt;div class="form-check">
+        &lt;input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        &lt;label class="form-check-label" for="flexCheckDefault">
+        Default checkbox
+    &lt;/label>
+&lt;/div>
+&lt;div class="form-check">
+        &lt;input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+        &lt;label class="form-check-label" for="flexCheckChecked">
+        Checked checkbox
+    &lt;/label>
+&lt;/div>
+
+&lt;div class="form-check">
+        &lt;input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+        &lt;label class="form-check-label" for="flexCheckIndeterminate">
+        Indeterminate checkbox
+    &lt;/label>
+&lt;/div>
+
+
+
+
+&lt;div class="form-check">
+        &lt;input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminateDisabled" disabled>
+        &lt;label class="form-check-label" for="flexCheckIndeterminateDisabled">
+        Disabled indeterminate checkbox
+    &lt;/label>
+&lt;/div>
+&lt;div class="form-check">
+        &lt;input class="form-check-input" type="checkbox" value="" id="flexCheckDisabled" disabled>
+        &lt;label class="form-check-label" for="flexCheckDisabled">
+        Disabled checkbox
+    &lt;/label>
+&lt;/div>
+&lt;div class="form-check">
+        &lt;input class="form-check-input" type="checkbox" value="" id="flexCheckCheckedDisabled" checked disabled>
+        &lt;label class="form-check-label" for="flexCheckCheckedDisabled">
+        Disabled checked checkbox
+    &lt;/label>
+&lt;/div>
+
+
+
+&lt;div class="form-check">
+        &lt;input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+        &lt;label class="form-check-label" for="flexRadioDefault1">
+        Default radio
+    &lt;/label>
+&lt;/div>
+&lt;div class="form-check">
+        &lt;input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+        &lt;label class="form-check-label" for="flexRadioDefault2">
+        Default checked radio
+    &lt;/label>
+&lt;/div>
+
+
+
+
+
+&lt;div class="form-check">
+        &lt;input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled>
+        &lt;label class="form-check-label" for="flexRadioDisabled">
+        Disabled radio
+    &lt;/label>
+&lt;/div>
+&lt;div class="form-check">
+        &lt;input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" checked disabled>
+        &lt;label class="form-check-label" for="flexRadioCheckedDisabled">
+        Disabled checked radio
+    &lt;/label>
+&lt;/div>
+
+
+
+
+&lt;div class="form-check form-switch">
+        &lt;input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+        &lt;label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input&lt;/label>
+&lt;/div>
+&lt;div class="form-check form-switch">
+        &lt;input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+        &lt;label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input&lt;/label>
+&lt;/div>
+&lt;div class="form-check form-switch">
+        &lt;input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
+        &lt;label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input&lt;/label>
+&lt;/div>
+&lt;div class="form-check form-switch">
+        &lt;input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
+        &lt;label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input&lt;/label>
+&lt;/div>
+
+
+
+
+&lt;div class="form-check">
+        &lt;input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+        &lt;label class="form-check-label" for="defaultCheck1">
+        Default checkbox
+    &lt;/label>
+&lt;/div>
+&lt;div class="form-check">
+        &lt;input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+        &lt;label class="form-check-label" for="defaultCheck2">
+        Disabled checkbox
+    &lt;/label>
+&lt;/div>
+
+
+
+
+&lt;div class="form-check">
+        &lt;input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+        &lt;label class="form-check-label" for="exampleRadios1">
+        Default radio
+    &lt;/label>
+&lt;/div>
+&lt;div class="form-check">
+        &lt;input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        &lt;label class="form-check-label" for="exampleRadios2">
+        Second default radio
+    &lt;/label>
+&lt;/div>
+&lt;div class="form-check">
+        &lt;input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+        &lt;label class="form-check-label" for="exampleRadios3">
+        Disabled radio
+    &lt;/label>
+&lt;/div>
+
+
+
+
+&lt;div class="form-check form-check-inline">
+        &lt;input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+        &lt;label class="form-check-label" for="inlineCheckbox1">1&lt;/label>
+&lt;/div>
+&lt;div class="form-check form-check-inline">
+        &lt;input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+        &lt;label class="form-check-label" for="inlineCheckbox2">2&lt;/label>
+&lt;/div>
+&lt;div class="form-check form-check-inline">
+        &lt;input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+        &lt;label class="form-check-label" for="inlineCheckbox3">3 (disabled)&lt;/label>
+&lt;/div>
+
+
+&lt;div class="form-check form-check-inline">
+        &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        &lt;label class="form-check-label" for="inlineRadio1">1&lt;/label>
+&lt;/div>
+&lt;div class="form-check form-check-inline">
+        &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        &lt;label class="form-check-label" for="inlineRadio2">2&lt;/label>
+&lt;/div>
+&lt;div class="form-check form-check-inline">
+        &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+        &lt;label class="form-check-label" for="inlineRadio3">3 (disabled)&lt;/label>
+&lt;/div>
+
+
+&lt;div class="form-check form-check-reverse">
+        &lt;input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
+        &lt;label class="form-check-label" for="reverseCheck1">
+        Reverse checkbox
+    &lt;/label>
+&lt;/div>
+&lt;br />
+&lt;div class="form-check form-check-reverse">
+        &lt;input class="form-check-input" type="checkbox" value="" id="reverseCheck2" disabled>
+        &lt;label class="form-check-label" for="reverseCheck2">
+        Disabled reverse checkbox
+    &lt;/label>
+&lt;/div>
+&lt;br />
+&lt;div class="form-check form-switch form-check-reverse">
+        &lt;input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
+        &lt;label class="form-check-label" for="flexSwitchCheckReverse">Reverse switch checkbox input&lt;/label>
+&lt;/div>
+
+
+&lt;br />
+
+
+
+&lt;div>
+        &lt;input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">
+&lt;/div>
+
+&lt;div>
+        &lt;input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="...">
+&lt;/div>
+&lt;br />
+
+
+&lt;input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+&lt;label class="btn btn-primary" for="btn-check">Single toggle&lt;/label>
+&lt;br />
+&lt;input type="checkbox" class="btn-check" id="btn-check-2" checked autocomplete="off">
+&lt;label class="btn btn-primary" for="btn-check-2">Checked&lt;/label>
+&lt;br />
+&lt;input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off" disabled>
+&lt;label class="btn btn-primary" for="btn-check-3">Disabled&lt;/label>
+
+&lt;br />
+
+&lt;input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off">
+&lt;label class="btn" for="btn-check-4">Single toggle&lt;/label>
+&lt;br />
+&lt;input type="checkbox" class="btn-check" id="btn-check-5" checked autocomplete="off">
+&lt;label class="btn" for="btn-check-5">Checked&lt;/label>
+&lt;br />
+&lt;input type="checkbox" class="btn-check" id="btn-check-6" autocomplete="off" disabled>
+&lt;label class="btn" for="btn-check-6">Disabled&lt;/label>
+&lt;br />
+
+
+&lt;input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+&lt;label class="btn btn-secondary" for="option1">Checked&lt;/label>
+&lt;br />
+&lt;input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+&lt;label class="btn btn-secondary" for="option2">Radio&lt;/label>
+&lt;br />
+&lt;input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" disabled>
+&lt;label class="btn btn-secondary" for="option3">Disabled&lt;/label>
+&lt;br />
+&lt;input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+&lt;label class="btn btn-secondary" for="option4">Radio&lt;/label>
+&lt;br />
+
+
+&lt;input type="radio" class="btn-check" name="options-base" id="option5" autocomplete="off" checked>
+&lt;label class="btn" for="option5">Checked&lt;/label>
+
+&lt;input type="radio" class="btn-check" name="options-base" id="option6" autocomplete="off">
+&lt;label class="btn" for="option6">Radio&lt;/label>
+
+&lt;input type="radio" class="btn-check" name="options-base" id="option7" autocomplete="off" disabled>
+&lt;label class="btn" for="option7">Disabled&lt;/label>
+
+&lt;input type="radio" class="btn-check" name="options-base" id="option8" autocomplete="off">
+&lt;label class="btn" for="option8">Radio&lt;/label>
+
+
+&lt;br />
+
+
+
+
+&lt;input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+&lt;label class="btn btn-outline-primary" for="btn-check-outlined">Single toggle&lt;/label>&lt;br>
+
+&lt;input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off">
+&lt;label class="btn btn-outline-secondary" for="btn-check-2-outlined">Checked&lt;/label>&lt;br>
+
+&lt;input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+&lt;label class="btn btn-outline-success" for="success-outlined">Checked success radio&lt;/label>
+
+&lt;input type="radio" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
+&lt;label class="btn btn-outline-danger" for="danger-outlined">Danger radio&lt;/label>
+</pre>
+        </div>
+        <div id="script">
+            <h3>Script ve Javascript</h3>
+            <p>Script HTMML'deki Javascript etiketidir.Burada web site çalışırken yazıyı değiştiri.Biz burada id'li anlatacağız.<b>Not:Burada script etiketini body'nin hemen üstüne yazacağız</b></p>
+            <p id="yazı">Yazı</p>
+            <button onclick="document.getElementById('yazı').style.backgroundColor = 'red';">Kırmızı</button>
+            <button onclick="document.getElementById('yazı').style.backgroundColor = 'white';">Beyaz</button>
+            <pre class="koddur"> 
+&lt;p id="yazı">Yazı&lt;/p>
+&lt;button onclick="document.getElementById('yazı').style.backgroundColor = 'red';">Kırmızı&lt;/button>
+&lt;button onclick="document.getElementById('yazı').style.backgroundColor = 'white';">Beyaz&lt;/button>
+</pre>
+            <b>Script etiketini bağlamak</b>
+            <br />
+            <img src="Mysqldir/cozum.png" alt="make" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <img src="Mysqldir/tık.png" alt="make" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <img src="Mysqldir/ac.png" alt="make" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <img src="Mysqldir/java.png" alt="make" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <p>Aşağıda fonksiyon kullanılıcaktır</p>
+            <br />
+            <b>Unutmayın HTML'de  body'nin üstüne en sonda kullanılan kod yazılacaktır.</b>
+            <br />
+            <p id="yazı1">Yazı</p>
+            <button onclick="fonk1()">Software</button>
+            <button onclick="fonk2();">Arms</button>
+            <h4>Javascript</h4>
+            <pre class="koddur">
+var k = document.getElementById('yazı1');
+function fonk1() {
+
+    k.innerHTML = "Yazılım"
+}
+function fonk2() {
+
+    k.innerHTML = "Savunma Sanayi";
+}
+
+</pre>
+            <h4>HTML</h4>
+            <pre class="koddur">
+&lt;p id="yazı1">Yazı&lt;/p>
+&lt;button onclick="fonk1()">Software&lt;/button>
+&lt;button onclick="fonk2()">Arms&lt;/button>
+&lt;script src="javascriptadi.js" &gt; &lt;/script&gt;
+</pre>
+            <p>Buradaki function sistemi kısaltıp fonksiyon oluşturdu ve var k = document.getElementById('yazı1'); k değişkenine yazı1'i atar value olarak şöyle yapılabilir.<b>Aşağıda function'a parametre girilecek ve inputtan veri çekilecektir.</b></p>
+            <p id="m">Sonuç</p>
+            <input type="number" id="sayidir" />
+            <button onclick="fonksiyon(document.getElementById('sayidir').value)">topla</button>
+            <h4>Javascript</h4>
+            <pre class="koddur">
+function fonksiyon(x) {
+    var sonuc = 0;
+    for (var j = 0; j <= x; j++) {
+        sonuc = sonuc + j;
+    }
+    document.getElementById("m").innerHTML = x + " sayısına kadar olan sayıların toplamı : " + sonuc;
+}
+</pre>
+            <h4>HTML</h4>
+            <pre class="koddur">
+        &lt;p id="m">Sonuç&lt;/p&gt;
+        &lt;input type="number" id="sayidir" />
+        &lt;button onclick="fonksiyon(document.getElementById('sayidir').value)">topla&lt;/button>
+&lt;script src="javascriptadi.js" &gt; &lt;/script&gt;
+</pre>
+
+            <h3>Noscript</h3>
+            <p>Noscript script etiketinitanımlamayan tarayıcılarda kullanılır.</p>
+            <pre class="koddur">
+&lt;noscript src="javascript.js">Bu tarayıcıda script kullanılamıyor&lt;/noscript>
+</pre>
+            <h4>JQUERY</h4>
+            <p>Jquery CSS'in javascript hali gibi düşünebilirsiniz burada sabit scriptler bulunur.Jquerry'i aktifleştirmek için <a href="https://jquery.com/">Jquery'ye</a> gidiyoruz.Jquery indire tıklıyoruz.Aşağıdaki resimde olan yere tıklıyoruz.</p>
+            <img src="csharpnet/resim.png" alt="jquery" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <p>Buna tıklayıp çıkan yerden &lt;script&gt; src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" &lt;/script&gt; ve bunu başa(headın altına) yazıyoruz.Headın içine şıu kodları yazıyoruz<b>NOT:Sürüme göre yazı değişebilir.Ve alltaki bir örnektir</b> <br /><b> NOT:SCRİPT ETİKETİ KULLANMAK YERİNE JAVASCRİPT DOSYASI AÇILABİLİR FAKAT JQUERY BAĞLANTISI HTML AYNI KALMALIDIR</b> </p>
+            <button id="butto">Butona tıkla</button>
+            <p id="text">Burası <b>TÜRK</b> yurdudur.<b>Cumhuriyetin 101. yılı kutlu olsun</b></p>
+            <button id="button1">Bunada tıkla</button>
+            <p id="text1">Burası <b>TÜRK</b> yurdudur.<b>Cumhuriyetin 101. yılı kutlu olsun</b></p>
+            <p id="yazı"></p>
+            <input id="birdeger" />
+            <br />
+            <button id="button2">Göster p</button>
+            <br />
+            <input id="yazılacakdeger" />
+            <br />
+            <button id="krm">Yaz input</button>
+            <br /><b>Script kodları(head altı kodlar)</b><br />
+            <pre class="koddur">
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"&gt;&lt;/script&lt;
+&lt;script&gt;
+    $(document).ready(function () { &lt;!--İdnin başına # getirilir-->
+        $("#butto").click(function () {
+            alert($("#text").html()); &lt;!--Burada idsi text olan şeyin yazısını uyarı olarak verir-->
+        })
+        $("#button1").click(function () {
+            $("#text1").html("&lt;b&gt;TÜRK&lt;b&gt;"); &lt;!--Butona basıldığında text idli şeyi parantez içindeki değer yapar-->
+        })
+        $("#button2").click(function () {
+            var deger = $("#birdeger").val(); &lt;!--buttona basıldığında birdegerden alınan veriyi yazı idli şeye yazdırır-->
+            $("#yazı").html(deger);
+        })
+        $("#krm").click(function () {
+            $("#yazılacakdeger").val("Hello World"); &lt;!--Buttona basıldığında krm idli şeyin değerini Hello World yapar-->
+        })
+    })
+&lt;/script&gt;
+</pre>
+            <br /><b>HTML Kodları</b><br />
+            <pre class="koddur">
+    &lt;button id="butto">Butona tıkla&lt;/button>
+    &lt;p id="text">Burası &lt;b>TÜRK&lt;/b> yurdudur.&lt;b>Cumhuriyetin 101. yılı kutlu olsun&lt;/b>&lt;/p>
+    &lt;button id="button1">Bunada tıkla&lt;/button>
+    &lt;p id="text1">Burası &lt;b>TÜRK&lt;/b> yurdudur.&lt;b>Cumhuriyetin 101. yılı kutlu olsun&lt;/b>&lt;/p>
+    &lt;p id="yazı">&lt;/p>
+    &lt;input id="birdeger" />
+    &lt;br />
+    &lt;button id="button2">Göster p&lt;/button>
+    &lt;br />
+    &lt;input id="yazılacakdeger" />
+    &lt;br />
+    &lt;button id="krm">Yaz input&lt;/button>
+</pre>
+        </div>
+        <div id="kısayollar">
+            <h3>MİCROSOFT VİSUAL STUDİO'YA GÖRE KISAYOLLAR</h3>
+            <ol type="1">
+                <li>Shift+Alt+W bu kısayol bir kodun div ile kaplanmasını sağla</li>
+                <li> Ctrl+K ,CTRL+C seçilen satırı ya da kelime grubunu yorum satırı yapar</li>
+                <li>Ctrl+K,Ctrl+U seçilen satırı işlevsel satıra dönüştürür</li>
+                <li>F5 projeyi derleyip başlatır</li>
+                <li>Ctrl+Z geri al</li>
+                <li>Ctrl+Y yinele</li>
+
+            </ol>
+        </div>
+    </div>
+    <!--</div>-->
+    <script src="JavaScript.js"></script>
+    <!-- picture -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

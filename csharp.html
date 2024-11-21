@@ -1,0 +1,1094 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>C#</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link href="csharptasarım.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3 fixed-top">
+            <a class="navbar-brand" href="Anasayfa.html">Anasayfa</a>
+            <ul class="nav nav-pills">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Konular</a>
+                    <ul class="dropdown-menu overflow-auto dropdown-menu-scrollable">
+                        <li><a class="dropdown-item" href="#mysql">C# .NET .Farework</a></li>
+                        <li><a class="dropdown-item" href="#buton">Button Click</a></li>
+                        <li><a class="dropdown-item" href="#messagebox">MessageBox</a></li>
+                        <li><a class="dropdown-item" href="#label">Label</a></li>
+                        <li><a class="dropdown-item" href="#textbox">TextBox</a></li>
+                        <li><a class="dropdown-item" href="#listbox">ListBox</a></li>
+                        <li><a class="dropdown-item" href="#diziler">Diziler</a></li>
+                        <li><a class="dropdown-item" href="#karşılaştırma">Karşılaştırma</a></li>
+                        <li><a class="dropdown-item" href="#string_metodları">String Metodları</a></li>
+                        <li><a class="dropdown-item" href="#xydiziler">Çok Boyutlu Diziler</a></li>
+                        <li><a class="dropdown-item" href="#switch">ComboBox ve Switch Case</a></li>
+                        <li><a class="dropdown-item" href="#class">Kapsülleme</a></li>
+                        <li><a class="dropdown-item" href="#delegate">Delegate</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <br />
+        <br />
+        <br />
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0" style="background-color:lightblue">
+            <div id="c#">
+                <h2>C# .NET.Farework</h2>
+                <p>Bu bir uygulama yazılımıdır burada visual studio kullanılacakstır.</p>
+                <img src="csharpnet/formsürükle.png" alt="sürücü" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+                <p>Soldaki seçenekten kullanılacak özelliği sürükleyip bırakın ya da aram kutusuna sürükleyceğiniz şeyi yazın</p>
+            </div>
+            <div id="buton">
+                <h3>button Click özellik </h3>
+                <p>Sol araç kutusundaki buttonu sürükleyip forma bırakın</p>
+                <img src="csharpnet/ozellik.png" alt="Buton" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+                <p> burada text'te yazıyı yazın ve click olayı için iki kere hızlı hızlı butonun üstüne tıklayın  </p>
+            </div>
+            <div id="messagebox">
+                <h3>MessageBox</h3>
+                <p>MessageBox sisteme uyarı gibi mesaj verir</p>
+                <pre class="koddur">
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ssbyt
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Bu bir testtir");
+        }
+    }
+}
+
+</pre>
+                <img src="csharpnet/test.png" alt="text" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            </div>
+            <div id="label">
+                <h3>Label</h3>
+                <p>Label yazı kutusudur</p>
+                <pre class="koddur">
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ssbyt
+{
+    public partial class Form2 : Form
+    {
+        public Form2()
+        {
+            InitializeComponent();
+            label1.Text = "Merhaba bu bir label";
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
+
+</pre>
+                <img src="csharpnet/label.png" alt="label" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            </div>
+        </div>
+
+    <div id="textbox">
+        <h3>Textbox</h3>
+        <p>Textbox veri girişi yapar.Şimdi textBox'tan gelen veriyle hesap makinesi yaptık</p>
+        <img src="csharpnet/hesap.png" alt="Hesap" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;"/>
+        <pre class="koddur">
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ssbyt
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+            
+        }
+        int sayi1 = 0;
+        int sayi2 = 0;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            sayi1=Convert.ToInt32(textBox1.Text);//değişkeni1 yi textBox1'den gelen veriyi int çevir ve değişkene ata
+            sayi2 =Convert.ToInt32(textBox2.Text);//değişkeni2 yi textBox2'den gelen veriyi int çevir ve değişkene ata
+            MessageBox.Show(sayi1.ToString()+" + "+sayi2.ToString()+" = "+(sayi1+sayi2).ToString());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            sayi1 = Convert.ToInt32(textBox1.Text);//değişkeni1 yi textBox1'den gelen veriyi int çevir ve değişkene ata
+            sayi2 = Convert.ToInt32(textBox2.Text);//değişkeni2 yi textBox2'den gelen veriyi int çevir ve değişkene ata
+            MessageBox.Show(sayi1.ToString() + " - " + sayi2.ToString() + " = " + (sayi1 - sayi2).ToString());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            sayi1 = Convert.ToInt32(textBox1.Text);//değişkeni1 yi textBox1'den gelen veriyi int çevir ve değişkene ata
+            sayi2 = Convert.ToInt32(textBox2.Text);//değişkeni2 yi textBox2'den gelen veriyi int çevir ve değişkene ata
+            MessageBox.Show(sayi1.ToString() + " x " + sayi2.ToString()  +" = "+(sayi1 * sayi2).ToString());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            sayi1 = Convert.ToInt32(textBox1.Text);//değişkeni1 yi textBox1'den gelen veriyi int çevir ve değişkene ata
+            sayi2 = Convert.ToInt32(textBox2.Text);//değişkeni2 yi textBox2'den gelen veriyi int çevir ve değişkene ata
+            MessageBox.Show(sayi1.ToString() + " : " + sayi2.ToString() + " = " + (sayi1 / sayi2).ToString());
+        }
+    }
+}
+
+</pre>
+    </div>
+
+    <div id="listbox">
+        <h3>Listbox</h3>
+        <p>Listbox liste kutusudur bidldiğimiz</p>
+        <img src="csharpnet/listbox.png" class="container resim" alt="list" style="display: flex; justify-content: center; align-items: center; max-width: 100%;"/>
+        <p>Burada listboxı kullanmayacağız altta listboxı kullanacağız</p>
+    </div>
+    <div id="diziler">
+        <h3>Diziler</h3>
+        <p>Diziler nedir diziler bir değişken türünde bir listedir.İki çeşit dizi vardır.Aşağıdaki örnekte bazı isimler gireceğiz ve bunları listboxta göstereceğiz</p>
+        <img src="csharpnet/butlistdizi.png" alt="Hesap" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;"/>
+        <pre class="koddur">
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ssbyt
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+            
+        }
+        int sayi1 = 0;
+        int sayi2 = 0;
+  
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string[] ad = { "Ekrem","Süha","Mustafa","Ahmet","Salih","Sefa","Tunahan" };
+            for(int i=0;i&lt;ad.Length;i++) {
+            listBox1.Items.Add(ad[i]);
+            }
+     }
+  }
+}
+
+</pre>
+    </div>
+    <div id="karşılaştırma">
+        <h3>Karşılaştırma</h3>
+        <p>Karşılaştırmanının farklı yolları vardır.Biz burada türlerini göstermeyeceğiz türlerini öğrenmek istiyorsanız dizi karşılaştırmalarını araştırabilirsiniz</p>
+        <img src="csharpnet/karşı.png" alt="karşı" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;"/>
+        <pre class="koddur">
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ssbyt
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+            
+        }
+        int sayi1 = 0;
+        int sayi2 = 0;
+        int[] sayi = {1,2,34,5,97,6,8896,908,433,3233,68,133,4533 ,2121};
+        private void button5_Click(object sender, EventArgs e)
+        {
+           
+            for(int i=0;i&lt;sayi.Length;i++)
+            {
+                listBox1.Items.Add(sayi[i].ToString());
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Add(sayi.Min());
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Add(sayi.Max());
+        }
+    }
+}
+
+</pre>
+    </div>
+    <div id="string_metodları">
+        <h3>String metoddları</h3>
+        <p>Aşağıda string metodları vardı yorum satırlarında görevleri yazmaktadır.</p>
+        <img src="csharpnet/16.png" alt="string metod" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;"/>
+        <pre class="koddur">
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+namespace ssbyt
+{
+    public partial class Form1 : Form
+    {
+        
+        public Form1()
+        {
+            InitializeComponent();
+           
+
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            string isim1 = "Teknofestle uzaya";
+            string isim2 = "18/01/2024";
+            int uzunluk = isim1.Length;//verinin uzunluğu
+            MessageBox.Show("1. İsim uzunluğu :" +uzunluk);
+            string birlestir = string.Concat(isim2, isim1);//verilerin birleşimi
+            string isim2yeni=isim2.Replace("18", "01");//1. yerine 2.nin yazılması
+            string[] isim12 = isim1.Split(' ');//boşlukları kesip dize oluşturma
+            string toplanma = "";
+            for (int i = 0; i < isim12.Length; i++)
+            {
+                toplanma = isim12[i] + toplanma;
+            }
+            MessageBox.Show(toplanma);
+            if(isim1.IndexOf("uzaya")!=-1)//uzaya varsa -1 eşit değilse vardır -1'e eşitse yoktur
+            {
+                MessageBox.Show(isim1 + "'de 'uzaya' kelimesi var");
+            }
+            else
+            {
+                MessageBox.Show(isim1 + "'de 'uzaya' kelimesi yok");
+            }
+            MessageBox.Show(isim2.ToLower());//tüm harfler küçük
+            MessageBox.Show(isim1.ToUpper());//tüm harfler büyük
+            MessageBox.Show(isim2.Substring(2, 6));//verinin 2 karakterinden sonraki 6 karakteri bize verir
+            MessageBox.Show((isim1.Remove(1, 4)));//substring tersi
+            MessageBox.Show(isim2.Trim('1'));//girilen karakter varsa orayı silme başta ve sonda
+            MessageBox.Show(isim1.TrimEnd('T'));//girilen karakter sonda varsa silme  
+            MessageBox.Show(isim2.TrimStart('4'));//girilen karakter başta varsa o karakteri silme 
+        }
+    }
+}
+
+</pre>
+    </div>
+    <div id="xydiziler">
+        <h3>Çok boyutlu diziler</h3>
+        <p>Çok boyutlu diziler x y konumları olan dizilerdir.Yani int[,]sayi={ {1,2,3,4} {5,6,7,8} }; olabilir bu somut olarak şöyle gösterilir</p>
+        <img src="csharpnet/xydizi.png" alt="dizixy" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;"/>
+        <p>Şimdi bir çok boyutlu dizi nasıl listboxda gösterilir onun odunu yazacağız</p>
+        <pre class="koddur">
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ssbyt
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+            
+        }
+   
+        int[,] sayilarxy = { {1, 2, 3, 4}, { 5, 6, 7, 8 }, { 9, 10, 11, 12 }, { 13, 14, 15, 16 } };
+       
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            
+            for(int i=0;i&lt;sayilarxy.GetLength(0);i++)
+            {
+                string kelime = "";
+                for (int j = 0; j &lt; sayilarxy.GetLength(1); j++)
+                {
+                   kelime=sayilarxy[i,j].ToString()+" "+kelime;
+                }
+                listBox1.Items.Add(kelime);
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < sayilarxy.GetLength(0); i++)
+            {
+                string kelime = "";
+                for (int j = sayilarxy.GetLength(1)-1; j >= 0; j--)
+                {
+                    kelime = sayilarxy[i, j].ToString() + " " + kelime;
+                }
+                listBox1.Items.Add(kelime);
+            }
+        }
+    }
+}
+
+</pre>
+    </div>
+    <div id="switch">
+        <h3>Combobox ve switch case</h3>
+        <p>Seçenekli textBox gibi düşünebilrisiniz.Switch ise seçenekler veriri ve default seçeneği zorunludur her case(seçeneğin) içine <b>break;</b> konulmalıdır.Default içinde break; konuşlmalıdır.<b>Bunu yapabilmek için kodla yada elle yazarak bir şekilde combobox'a 81 il geçirilmelidir</b>.COMBOBOX VE BUTON LAZIM</p>
+        <img src="csharpnet/COMBOBOX.png" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;"/>
+        <pre class="koddur">
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+namespace ssbyt
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+           
+
+        }
+
+        string plakaKodu = "";
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+            string sehir = comboBox1.Text;
+
+
+            switch (sehir)
+            {
+                case " Adana":
+                    plakaKodu = "01";
+                   
+                    break;
+                case "Adıyaman":
+                    plakaKodu = "02";
+                    break;
+                case "Afyonkarahisar":
+                    plakaKodu = "03";
+                    break;
+                case "Ağrı":
+                    plakaKodu = "04";
+                    break;
+                case "Amasya":
+                    plakaKodu = "05";
+                    break;
+                case "Ankara":
+                    plakaKodu = "06";
+                    break;
+                case "Antalya": plakaKodu = "07"; break;
+                case "Artvin": plakaKodu = "08"; break;
+                case "Aydın": plakaKodu = "09"; break;
+                case "Balıkesir": plakaKodu = "10"; break;
+                case "Bilecik": plakaKodu = "11"; break;
+                case "Bingöl": plakaKodu = "12"; break;
+                case "Bitlis": plakaKodu = "13"; break;
+                case "Bolu": plakaKodu = "14"; break;
+                case "Burdur": plakaKodu = "15"; break;
+                case "Bursa": plakaKodu = "16"; break;
+                case "Çanakkale": plakaKodu = "17"; break;
+                case "Çankırı": plakaKodu = "18"; break;
+                case "Çorum": plakaKodu = "19"; break;
+                case "Denizli": plakaKodu = "20"; break;
+                case "Diyarbakır": plakaKodu = "21"; break;
+                case "Edirne": plakaKodu = "22"; break;
+                case "Elazığ": plakaKodu = "23"; break;
+                case "Erzincan": plakaKodu = "24"; break;
+                case "Erzurum": plakaKodu = "25"; break;
+                case "Eskişehir": plakaKodu = "26"; break;
+                case "Gaziantep": plakaKodu = "27"; break;
+                case "Giresun": plakaKodu = "28"; break;
+                case "Gümüşhane": plakaKodu = "29"; break;
+                case "Hakkari": plakaKodu = "30"; break;
+                case "Hatay": plakaKodu = "31"; break;
+                case "Isparta": plakaKodu = "32"; break;
+                case "Mersin": plakaKodu = "33"; break;
+                case "İstanbul": plakaKodu = "34"; break;
+                case "İzmir": plakaKodu = "35"; break;
+                case "Kars": plakaKodu = "36"; break;
+                case "Kastamonu": plakaKodu = "37"; break;
+                case "Kayseri": plakaKodu = "38"; break;
+                case "Kırklareli": plakaKodu = "39"; break;
+                case "Kırşehir": plakaKodu = "40"; break;
+                case "Kocaeli": plakaKodu = "41"; break;
+                case "Konya": plakaKodu = "42"; break;
+                case "Kütahya": plakaKodu = "43"; break;
+                case "Malatya": plakaKodu = "44"; break;
+                case "Manisa": plakaKodu = "45"; break;
+                case "Kahramanmaraş": plakaKodu = "46"; break;
+                case "Mardin": plakaKodu = "47"; break;
+                case "Muğla": plakaKodu = "48"; break;
+                case "Muş": plakaKodu = "49"; break;
+                case "Nevşehir": plakaKodu = "50"; break;
+                case "Niğde": plakaKodu = "51"; break;
+                case "Ordu": plakaKodu = "52"; break;
+                case "Rize": plakaKodu = "53"; break;
+                case "Sakarya": plakaKodu = "54"; break;
+                case "Samsun": plakaKodu = "55"; break;
+                case "Siirt": plakaKodu = "56"; break;
+                case "Sinop": plakaKodu = "57"; break;
+                case "Sivas": plakaKodu = "58"; break;
+                case "Tekirdağ": plakaKodu = "59"; break;
+                case "Tokat": plakaKodu = "60"; break;
+                case "Trabzon": plakaKodu = "61"; break;
+                case "Tunceli": plakaKodu = "62"; break;
+                case "Şanlıurfa": plakaKodu = "63"; break;
+                case "Uşak": plakaKodu = "64"; break;
+                case "Van": plakaKodu = "65"; break;
+                case "Yozgat": plakaKodu = "66"; break;
+                case "Zonguldak": plakaKodu = "67"; break;
+                case "Aksaray": plakaKodu = "68"; break;
+                case "Bayburt": plakaKodu = "69"; break;
+                case "Karaman": plakaKodu = "70"; break;
+                case "Kırıkkale": plakaKodu = "71"; break;
+                case "Batman": plakaKodu = "72"; break;
+                case "Şırnak": plakaKodu = "73"; break;
+                case "Bartın": plakaKodu = "74"; break;
+                case "Ardahan": plakaKodu = "75"; break;
+                case "Iğdır": plakaKodu = "76"; break;
+                case "Yalova": plakaKodu = "77"; break;
+                case "Karabük": plakaKodu = "78"; break;
+                case "Kilis": plakaKodu = "79"; break;
+                case "Osmaniye": plakaKodu = "80"; break;
+                case "Düzce": plakaKodu = "81"; break;
+                default:  break;
+            }
+            MessageBox.Show(plakaKodu);
+        }
+    }
+}
+
+</pre>
+    </div>
+    <div id="class">
+        <h3>Kapsülleme ,Class ve Class yapıları</h3>
+        <p>Class kapsüllemedir classın belli başlı yapıları vardır ilk olarak şunu yapacağız</p>
+        <h4> CLASS NASIL OLUŞUR</h4>
+        <p>Class oluşturmak için çözüm gezginine gelin</p>
+        <img src="csharpnet/cozumgezgini.png" alt="class" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;"/>
+        <p>PROJE ADININ OLDUĞU YERE SAĞ CLİCK yapın</p>
+        <img src="csharpnet/ad.png" alt="ad" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;"/>
+        <p>Çıkan seçeneklerden eklenin üstüne gelip çıkan kısımdan yeni öğe  diyoruz </p>
+        <img src="csharpnet/sec.png" alt="seçenek" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;"/>
+        <p>
+            Class'a tıklayıp altta class adını giriyoruz
+        </p>
+        <img src="csharpnet/sınıf.png" alt="sınıftır" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;"/>
+    </div>
+    <h4>Class öğeleri</h4>
+    <h4>Proporty</h4>
+    <p>
+        Proprty classın değişkendir get; veya get{ return degisken_adı)} ve set; veya set{degisken_adi=value} zorunludur şimdi basit bir proporty oluşturalım.Proportyy yapısı öyle tür(pubic,private) değişken türü(int string) adı
+        {get ; set}
+    </p>
+    <pre class="koddur">
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ssbyt
+{
+    internal class ssb
+    {
+        int proteinporty;
+        public int Proteinporty
+        {
+            get
+            {
+                return proteinporty;
+            }
+            set
+            {
+                proteinporty = value;
+            }
+        }
+    }
+}
+
+</pre>
+    <h4>Fonksiyon metod</h4>
+    <p>
+        Fonksiyon metoddur işte bir koddla çok kodu yaparız.Fonksiyon yapısı tür(pubic,private) değişken türü(int, string,void[değişken türlerinde return olması zorunludur]) adı()
+        {}
+    </p>
+    <pre class="koddur">
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ssbyt
+{
+    internal class ssb
+    {
+        int proteinporty;
+        public int Proteinporty
+        {
+            get
+            {
+                return proteinporty;
+            }
+            set
+            {
+                proteinporty = value;
+            }
+        }
+        public void goster()
+        {
+            MessageBox.Show("goster metodu çalışıyor");
+        }
+    }
+}
+
+</pre>
+    <p>Kodun çalışması için şu kod forma yazılmalıdır.Tanımlama kuralı şöyledir class_adi oge_adi = new classadi();</p>
+    <img src="csharpnet/ssbclasswq.png" alt="classtagnım  " class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;"/>
+    <pre class="koddur">
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+namespace ssbyt
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+           
+
+        }
+
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            ssb ssbr = new ssb();
+            ssbr.Proteinporty = 3;
+            ssbr.goster();
+        }
+    }
+}
+</pre>
+    <p>Bunları kullanarak hesap makinesi yapabilirsiniz.</p>
+    <b>NOT BURADA TEMELLERİ ANLATIYORUZ ÇOK YÜKLEME GİBİ ŞEYLERİ ARAŞTIRIRSANIZ SEVİNİRİZ</b>
+    <h4>Soyutlama ınterface and abstract Ve veri çekme ve CLASSI PARAMETRE ATAMA</h4>
+    <p>Class'a değer atamak için şu yapılır public class_adi(degisken_türü degiskenadi){}</p>
+    <b>Class kodu</b>
+    <pre class="koddur">
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ssbyt
+{
+    internal class ssb 
+    {
+        int proteinporty;
+        public ssb(int i)
+            {
+                Proteinporty=i ;           
+            }
+        public int Proteinporty
+        {
+            get
+            {
+                return proteinporty;
+            }
+            set
+            {
+                proteinporty = value;
+            }
+        }
+        public void goster()
+        {
+            MessageBox.Show(Tr.ToString());
+        }
+    }
+}
+
+</pre>
+    <b>FORM KODU</b>
+    <pre class="koddur">
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+namespace ssbyt
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+           
+
+        }
+
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            int m = 12;
+            ssb ssbr = new ssb();
+            ssbr.Proteinporty = 3;
+            ssbr.goster();
+        }
+    }
+}
+</pre>
+    <p>Veri çekme iki classın birbirine bağlanmasıdır.Şu şekilde yaplır iki class oluşturun birine bir değer verin öbürüne bir fonksiyon fonksiyonda öbür classtaki değer yazsın</p>
+    <img src="csharpnet/bağlama.png" alt="bağlama" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;"/>
+    <b>veri gönderecek Sınıf kodu</b>
+    <pre class="koddur">
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ssbyt
+{
+    public class turan
+    {
+        int tr;
+        
+        
+            
+        
+        public int Tr
+        {
+            get {
+                return tr;            
+            }
+            set
+            {
+                tr = value;
+            }
+        }
+    }
+}
+
+</pre>
+    <b>Veri alacak sınıf kodu</b>
+    <pre class="koddur">
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ssbyt
+{
+    internal class ssb : turan
+    {
+        int proteinporty;
+        public ssb(int i)
+            {
+            Tr = i;
+            }
+        public int Proteinporty
+        {
+            get
+            {
+                return proteinporty;
+            }
+            set
+            {
+                proteinporty = value;
+            }
+        }
+        public void goster()
+        {
+            MessageBox.Show(Tr.ToString());
+        }
+    }
+}
+
+</pre>
+    <b>FORM KODU</b>
+    <pre class="koddur">
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+namespace ssbyt
+{
+    public partial class Form1 : Form
+    {
+
+        public Form1()
+        {
+            InitializeComponent();
+           
+
+        }
+        
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            ssb ssbr = new ssb(Convert.ToInt32(textBox1.Text));
+            ssbr.goster();
+        }
+    }
+}
+
+</pre>
+    <h4>ABSTRACT SOYUTLAMA</h4>
+    <p>Abstract bir soyutlama işlemidir.Soyutlamada bir kalıp verilir.Örnek olarak mütahit sabit bir plan vardır bu planın üstüne ekleme yapar.abstract'ın gövdesi yoktur.veri çeken sınıf abstract kullandığınan dolayı override kullanılmalıdır</p>
+    <img src="csharpnet/buton12.png" alt="abstract" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;"/>
+    <b>Veri veren sınıf kodu</b>
+    <pre class="koddur">
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ssbyt
+{
+    public abstract class turan
+    {
+        int tr;
+
+
+
+        public abstract void m(int h);
+        public int Tr;
+    }
+}
+
+</pre>
+    <b>Veri alan sınıf</b>
+    <pre class="koddur">
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ssbyt
+{
+    internal class ssb : turan
+    {
+        int proteinporty;
+        public ssb(int i)
+            {
+            Tr = i;
+            }
+        public override void m(int h)
+        {
+            MessageBox.Show("Abstract soyutlama örneğidir");
+        }
+
+            
+        public int Proteinporty
+        {
+            get
+            {
+                return proteinporty;
+            }
+            set
+            {
+                proteinporty = value;
+            }
+        }
+        public void goster()
+        {
+            MessageBox.Show(Tr.ToString());
+        }
+    }
+}
+
+</pre>
+    <b>Form kodu</b>
+    <pre class="koddur">
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+namespace ssbyt
+{
+    public partial class Form1 : Form
+    {
+
+        public Form1()
+        {
+            InitializeComponent();
+           
+
+        }
+       
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            ssb s=new ssb(0);
+            s.m(0);
+        }
+    }
+}
+
+</pre>
+    <h4>Interface(sıkı abstract olarak kodlayabilrsiniz)</h4>
+    <p>Interface sıkı abstractır hiç bir şekilde (prporty dahil değil) gövde yok parametresi parametresine uymak zorundadır</p>
+    <b>Veri alan sınıf kodu</b>
+    <pre class="koddur">
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ssbyt
+{
+    internal class ssb : turan
+    {
+        
+        public int Tr {  get; set; }
+        int proteinporty;
+        public ssb(int i)
+            {
+          
+            }
+        public  void m(int h)
+        {
+            MessageBox.Show("Abstract soyutlama örneğidir");
+        }
+
+            
+        public int Proteinporty
+        {
+            get
+            {
+                return proteinporty;
+            }
+            set
+            {
+                proteinporty = value;
+            }
+        }
+  
+    }
+}
+
+</pre>
+    <b>İNTERFACE KODU</b>
+    <pre class="koddur">
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ssbyt
+{
+    interface turan
+    {
+      
+
+
+
+        void m(int h);
+         int Tr { get; set; }
+    }
+}
+
+</pre>
+    <b>Form kodu</b>
+    <pre class="koddur">using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+namespace ssbyt
+{
+    public partial class Form1 : Form
+    {
+
+        public Form1()
+        {
+            InitializeComponent();
+           
+
+        }
+
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            ssb s=new ssb(0);
+            s.m(0);
+        }
+    }
+}
+</pre>
+    <div id="delegate">
+        <h4>Delegate</h4>
+        <p>Delege bir yapıdır bu yapıya olaylar atanır ve bu olaylar kullanılır</p>
+        <img src="csharpnet/delege.png" class="container resim" alt="delege" style="display: flex; justify-content: center; align-items: center; max-width: 100%;"/>
+        <pre class="koddur">
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+namespace ssbyt
+{
+    public partial class Form1 : Form
+    {
+        public delegate void islem();
+        public Form1()
+        {
+            InitializeComponent();
+           
+
+        }
+        islem s;
+        public void tr()
+        {
+            MessageBox.Show("Delege");
+        }
+
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            s += tr;
+            s();
+        }
+    }
+}
+
+</pre>
+    </div></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!---->
+</body>
+</html>

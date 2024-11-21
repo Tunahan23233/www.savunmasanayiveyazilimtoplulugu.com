@@ -1,0 +1,395 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="veritabanıtasarım.css" rel="stylesheet" />
+    <title>MYSQL</title>
+</head>
+<body>
+    <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3 fixed-top">
+        <a class="navbar-brand" href="Anasayfa.html">Anasayfa</a>
+        <ul class="nav nav-pills">
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Konular</a>
+                <ul class="dropdown-menu overflow-auto dropdown-menu-scrollable">
+                    <li><a class="dropdown-item" href="#mysql">MYSQL</a></li>
+                    <li><a class="dropdown-item" href="#createsema">Şema Oluşturma</a></li>
+                    <li><a class="dropdown-item" href="#tabloolusturma">Tablo Oluşturma</a></li>
+                    <li><a class="dropdown-item" href="#tablogosterme">Tablo Gösterme</a></li>
+                    <li><a class="dropdown-item" href="#sorgu">Otonom Veri Girme ve Sorgulama</a></li>
+                    <li><a class="dropdown-item" href="#truncate">Tablo içini silme(truncate)</a></li>
+                    <li><a class="dropdown-item" href="#column">Kolon (Sütun) Ekleme</a></li>
+                    <li><a class="dropdown-item" href="#update">Veri Güncelleme</a></li>
+                    <li><a class="dropdown-item" href="#tablosilme">Tablo Silme</a></li>
+                    <li><a class="dropdown-item" href="#insert">Veri Ekleme</a></li>
+                    <li><a class="dropdown-item" href="#delete">Satır silme</a></li>
+                    <li><a class="dropdown-item" href="#join">Left Join Right Join Union Joinİnner join</a></li>
+                    <li><a class="dropdown-item" href="#trigger">Trigger</a></li>
+                    <li><a class="dropdown-item" href="#storeprosedur">Store Procedure</a></li>
+                    <li><a class="dropdown-item" href="#C#andMysql">C# and Mysql</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <br />
+    <br />
+    <br />
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0" style="background-color:lightblue">
+        <div id="mysql">
+            <h2>MYSQL</h2>
+            <p>Mysql bir veritabanı sistemidir burada şimdi yeni bir şema oluşturacağız <a href="https://www.mysql.com/downloads/">Burada işletim sisteminize uygun olarak MYSQL WORKBENCH'i indirebilirsiniz</a></p>
+        </div>
+        <div id="createsema">
+            <h3>Şema Oluşturma</h3>
+            <p>Şema oluşturma şemada oluşturacağız.Şema tablelerin bulunduğu ağaç gibi düşünebilrisiniz</p>
+            <img src="Mysqldir/sema.png" alt="Şema" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+        </div>
+        <div id="tabloolusturma">
+            <h3>table oluşturma</h3>
+            <p>Şema içinde tableler oluştururuz bunun iki yolu vardır bir kod</p>
+            <pre class="koddur">
+use veritabanı_adı; /*burada kullanılacak veri tabanını yazıyoruz*/
+create table tablo(
+id int primary key auto_increment not null,
+    ad varchar(16)
+);
+</pre>
+            <p>Veya mysqlde veritabanımıza tıklayıp açılan kısımda table ye sağ click yapıp</p>
+            <img src="Mysqldir/tabel.png" alt="tablo" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <p>Ondan sonra çıkan kısımda veri girip apply'a (sol altaki buton) tıklayın verileri girerken özellikleri unutmayın ve değişken türlerini yazın</p>
+            <img src="Mysqldir/tabloolustur.png" alt="tablolusutr" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+        </div>
+        <div id="tablogosterme">
+            <h3>select*from (tablo gösterme)</h3>
+            <p>Burada tablonun altta nasıl gösterileceğini yazabilirsin</p>
+            <pre class="koddur">
+select*from tablo_adı;
+</pre>
+            <img src="Mysqldir/tablegosterimi.png" alt="Tablogoster " class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+        </div>
+        <div id="sorgu">
+            <h3>Otonom veri girme ve Sorgulama</h3>
+            <p>Burada aşağıdaki şeyleri yapın</p>
+            <img src="Mysqldir/vergirel.png" alt="veri gir" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <p> bundan birkaç tane daha yapın ve sorgulamaya geçin</p>
+            <pre class="koddur">
+select*from veritabanı_adi where id < 5;/*id si 5'ten büyük olanları göster*/
+select*from veritabanı_adi where id >3; /*id si 3'ten büyük olanları göster*/
+select*from veritabanı_adi where id >4 and ad='ekrem'; /*id 4ten büyük ve adı ekrem olanları göster*/
+select*from veritabanı_adi where id =< 5 ; id si 5'e eşit ve beşten küçük olanlar
+select*from veritabanı_adi where id => 5 ; id si 5'e eşit ve beşten büyük olanlar
+select*from veritabanı_adi where ad='Ekrem' or not soyad='Sivrikaya'; /* adı ekrem veya soyadı sivrikaya olmayanları göster*/
+select*from veritabanı_adi where id between 3 and 8; /*id 3 ve sekiz arasında olanları  göster*/
+select*from veritabanı_adi where ad like '%em';/*em kelimesininin önünde birşey var*/
+select*from veritabanı_adi where ad like 'em%';/*em kelimesininin arkasında birşey var*/
+select*from veritabanı_adi where ad like '%em&';/*em kelimesininin önünde ve arkasında birşey var*/
+select*from veritabanı_adi where ad like '%_em%';/*em kelimesininin önünde ve arkasında  birşey var ve önünde rasgele bir karakter var*/
+select min(id) from dersler;/*idsi en küçük olanı gösterir*/
+select max(id) from dersler;/* idsi en büyük olanı gösterir*/
+
+</pre>
+            <div id="truncate">
+                <h3>Tablo içini silme truncate</h3>
+                <p>tablonun içini siler</p>
+                <pre class="koddur">
+truncate table tablo_adı;/*içini siler*/
+</pre>
+            </div>
+            <div id="column">
+                <h3>Kolon(sütun) ekleme ve sütun silme</h3>
+                <p>Burada bir tabloya kolon ekleme ve kolonu silmeyyi göstereceğiz</p>
+                <pre class="koddur">
+ alter table tabloadi add column eklenecekkolonadi int ;/* kolon ekler*/
+ alter table tabloadi drop column silinecekkolonadi;/* kolon siler*/
+</pre>
+            </div>
+        </div>
+        <div id="update">
+            <h3>Update güncelleme</h3>
+            <p>
+                burada güncelleme yapacağız tabloda
+            </p>
+            <pre class="koddur">
+update tabloadi set kolonadi = 200;/*girilen kolonadının tüm verilerini 200 yapar*/
+set sql_safe_updates =0;/* eğer bir sorun çıkarsa bunu çalıştırın*/
+update tabloadi set kolonadi = 200 where id =1;/*girilen kolonadının idsi 1 olanların verilerini 200 yapar*/
+</pre>
+        </div>
+        <div id="tablosilme">
+            <h3>Tablo silme</h3>
+            <p>Tablo silmek için drop kullanılır</p>
+            <pre class="koddur">
+drop table tabloadı;
+</pre>
+        </div>
+        <div id="insert">
+            <h3>Veri ekleme</h3>
+            <p>Burada manuel olarak veri ekleyeceğiz yani insert into</p>
+            <pre class="koddur">
+insert into tablo_adi (deger1,deger2, deger3, deger4) values ('1500','2000', '24', 'bordo bereli');/*veri ekler*/ 
+</pre>
+        </div>
+        <div id="delete">
+            <h3>Satır silme</h3>
+            <p>deletle satır siler</p>
+            <pre class="koddur">
+delete from tabloadi where id =4;/*idsi 4 olan satırı siler*/
+</pre>
+        </div>
+        <!--sqltunahv@ri@>£2Th6!q-->
+        <div id="join">
+            <h3>Left join ,Right join,inner join,union join</h3>
+            <p>Burada farklı farklı iki tablo gösterilir</p>
+            <pre class="koddur">
+select * from tabloadi left join tabloadi1 on tabloadi.id=tabloadi1.id;/*iki tabloyu tabloadi idsine göre gösterir*/
+select * from tabloadi right join tabloadi1 on tabloadi.id= tabloadi1.id; /*iki tabloyu tabloadi1 idsine göre gösterir*/
+
+
+
+
+
+select * from tabloadi inner join tabloadi1 on tabloadi.id=tabloadi1.id; /*Tabloda sadece koşula uyanları gösterir*/
+
+
+select * from tabloadi left join tabloadi1 on tabloadi.id=tabloadi1.id 
+union 
+select * from tabloadi right join tabloadi1 on tabloadi.id= tabloadi1.id;//union kullanarak ikisinide gösteriri left hoin ve right join
+
+</pre>
+        </div>
+        <div id="trigger">
+            <h3>TRİGGER(TETİKLEYİCİ)</h3>
+            <p>Tetikleyici şuradan tıklanır.</p>
+            <img src="Mysqldir/Ekran görüntüsü 2024-10-19 204819.png" alt="Mysqlbağlantı" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <p>bunun üstüne gelip ingiliz anahtarı sekmesine tıklıyoruz ve çıkan tablodan şuna taklıyoruz</p>
+            <img src="Mysqldir/trigger.png" alt="trigger" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <p>Çıkan kısımda before update(güncelleme öncesi) , after update(güncelleme sonrası),before insert(veri ekleme öncesi) , after insert(veri eklme sonrası),before delete(silme öncesi) , after delete(silme sonrası) bunlar trigger olaylarıdır.Burada örnek olarak mesela bir proje yaparken maastan %15 gelir vergisi gidebilir mesela</p>
+        </div>
+        <div id="storeprosedur">
+            <h3>Store prosedur</h3>
+            <p>Fonksiyon olarak düşünebilirsiniz alttaki tıkladığınız yere açılan kısımda fonksiyon kodunu yazın.Apply edin</p>
+            <img src="Mysqldir/storeprocedur.png" alt="store" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <br />
+            <b>STORE PROCEDUR ÇAĞIRMA KODLARI</b>
+            <pre class="koddur">
+call storeprceduradi(parametre_varsa_parametre_yoksa_yok);
+</pre>
+        </div>
+        <div id="C#andMysql">
+            <h2 style="text-align:center">C# ve MYSQL</h2>
+            <p>C# içinde mysql için bazı nuget paketi yüklememiz lazım nasıl yapacağız</p>
+            <b>Aşağıda kodlarda üst kısımlarda class ve gösterimi ,tanımlanması,fonksiyonlarını bildiğinizi varsayıyorumtek bilmeniz gereken şey datagridviewadi.DataSource=nesneadi.fonksiyonadı();</b>
+            <br />
+            <img src="csharpnet/cozumgezgini.png" alt="mysqlc#" class="container resim" />
+            <img src="mysqldir/nagıt.png" alt="nagıt" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <img src="Mysqldir/evrnu.png" alt="yükle" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <img src="Mysqldir/testoudtgkdu.png" alt="fsf" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <br />
+            <h4>Form kodu</h4>
+            <pre class="koddur">
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
+namespace ssbyt
+{
+    public partial class Form1 : Form
+    {
+
+        public Form1()
+        {
+            InitializeComponent();
+           
+
+        }
+
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            veritaban vr = new veritaban();
+            vr.baslat();
+            dataGridView1.DataSource = vr.veritabanigoster();
+            vr.kapat();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            veritaban vr = new veritaban();
+            vr.baslat();
+            vr.polissoru(textBox3.Text);
+            vr.kapat();
+        }
+    }
+}
+
+</pre>
+            <h4>SINIF KODU</h4>
+            <pre class="koddur">
+using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ssbyt
+{
+    internal class veritaban
+    {
+        string connetionString = "Server=localhost; Database = veritabanı_adi ;Uid=kullaniciadi; Password=sifre";
+
+        MySqlConnection conn;
+        MySqlCommand cmd;
+        public void baslat()
+        {
+            conn = new MySqlConnection(connetionString);
+            conn.Open();
+        }
+        public void kapat()
+        {
+            conn.Close();
+        }
+        public DataTable veritabanigoster()
+        {
+            string query = "select*from birtablo_;";//istenilen
+            cmd = new MySqlCommand(query, conn);
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+        public void polissoru(string sifre)
+        {
+
+            string query = "select*from birtablo_ where ad =@aramadegeri";
+
+            using (MySqlConnection connection = new MySqlConnection(connetionString))
+            {
+                //try
+                //{
+                connection.Open();
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@aramadegeri", sifre);
+
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+                       
+                        MessageBox.Show("Polis sayfasına geçiş yapmaktasınız");
+
+                    }
+                    else
+                    {
+                  
+                        MessageBox.Show("Kayıt bulunamadı.");
+
+                    }
+                }
+                //    }
+                //    catch (Exception ex)
+                //    {
+                //        MessageBox.Show("Error: " + ex.Message);
+                //    }
+            }
+
+
+        }
+    }
+}
+
+</pre>
+            <b>Burada temel  fonksiyonları verildi.Eğer başka bir olay yapmak istiyorsanız query veya istenilen yazan yere istediğiniz (insert into,update,delete,select*from vb. şeyleri) olayı yazınız.</b>
+        </div>
+        <!--using MySql.Data.MySqlClient;
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Windows.Forms;
+
+    namespace ssbyt
+    {
+        internal class veritaban
+        {
+            string connetionString = "Server=localhost; Database = veritabanı_adi ;Uid=kullaniciadi; Password=sifre";
+            MySqlConnection conn;
+            MySqlCommand cmd;
+            public void baslat()
+            {
+                conn = new MySqlConnection(connetionString);
+                conn.Open();
+            }
+            public void kapat()
+            {
+                conn.Close();
+            }
+            public DataTable veritabanigoster()
+            {
+                string query = "select*from veritabani_adi;";//istenilen
+                cmd = new MySqlCommand(query, conn);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+            public void polissoru(string sifre)
+            {
+
+                string query = "select*from tabloadi where arama_yapilacak_sey=@arama_degeri";
+
+                using (MySqlConnection connection = new MySqlConnection(connetionString))
+                {
+                    //try
+                    //{
+                    connection.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    cmd.Parameters.AddWithValue("@aramadegeri", sifre);
+
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+
+                            MessageBox.Show("Polis sayfasına geçiş yapmaktasınız");
+
+                        }
+                        else
+                        {
+
+                            MessageBox.Show("Kayıt bulunamadı.");
+
+                        }
+                    }
+                    //    }
+                    //    catch (Exception ex)
+                    //    {
+                    //        MessageBox.Show("Error: " + ex.Message);
+                    //    }
+                }
+
+
+            }
+        }
+    }-->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

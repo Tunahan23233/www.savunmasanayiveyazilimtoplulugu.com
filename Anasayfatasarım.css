@@ -1,0 +1,23 @@
+﻿.resim {
+    width: 1250px;
+    height: 500px;
+}
+
+.csde {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.container11 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Buton ve resim arasındaki boşluk */
+}
+.dropdown-menu {
+    max-height: 600px; /* Maksimum yükseklik */
+    overflow-y: auto; /* Kaydırma çubuğu */
+}
+p, #suvari, #anadolu, #knt, #tb2, #kaan, #Csharp, #HTML, #Cpp, #MySql, #siperresmi, #suvarisremi, #anadoluresmi, #kntresmi, #tb2resmi, #kaanresmi, #Csharpresmi, #HTMLresmi, #Cppresmi, #MySqlresmi, #siperresmi, #sorun,nav, h2, h3, h4, h5, h6, h7, img, button, hr, a, br {
+    display: none;
+}

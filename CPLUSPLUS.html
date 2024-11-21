@@ -1,0 +1,922 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>C++</title>
+    <link href="cpptasarım.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+</head>
+<body>
+    <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3 fixed-top" >
+        <a class="navbar-brand" href="Anasayfa.html">Anasayfa</a>
+        <ul class="nav nav-pills">
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Konular</a>
+                <ul class="dropdown-menu overflow-auto dropdown-menu-scrollable" style="max-height: 300px; max-width: 800px; overflow: auto; flex-wrap: wrap;">
+                    <li><a class="dropdown-item" href="#arduino">Arduino(C++)</a></li>
+                    <li><a class="dropdown-item" href="#ledblink">Led Blink</a></li>
+                    <li><a class="dropdown-item" href="#serial">Serial monitör</a></li>
+                    <li><a class="dropdown-item" href="#butonled">Buton ile led yakmak</a></li>
+                    <li><a class="dropdown-item" href="#analogpot">Analog veri okuma (pot)</a></li>
+                    <li><a class="dropdown-item" href="#pwmled">PWM led</a></li>
+                    <li><a class="dropdown-item" href="#karasimsek">Kara şimşek ve Fonksiyon oluşturma</a></li>
+                    <li><a class="dropdown-item" href="#ldr">LDR(FOTOREZİSTÖR)</a></li>
+                    <li><a class="dropdown-item" href="#rgb">RGB(RED ,GREEN,BLUE) Led</a></li>
+                    <li><a class="dropdown-item" href="#dht11">DHT11 ve Kütüphane Çağırma</a></li>
+                    <li><a class="dropdown-item" href="#metre">Ultrasonik Mesafe Sensörü</a></li>
+                    <li><a class="dropdown-item" href="#servo">Joystick ve Servo</a></li>
+                    <li><a class="dropdown-item" href="#IRSensör">IR sensör(Kızılötesi)</a></li>
+                    <li><a class="dropdown-item" href="#pır">PIR sensörü(Hareket)</a></li>
+                    <li><a class="dropdown-item" href="#nem">Toprak nem sensörü</a></li>
+                    <li><a class="dropdown-item" href="#gaz_sensörü">Gaz sensörü</a></li>
+                    <li><a class="dropdown-item" href="#hc05">Bluetooth modülleri</a></li>
+                    <li><a class="dropdown-item" href="#lcd">LCD ve I2C</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0" style="background-color:lightblue">
+        <br />
+        <br />
+        <br />
+        <div id="arduino">
+            <h2>C++(Arduino)</h2>
+            <p>
+                C++'a arduino denmesi o yazılım diliyle kullanılmasıdır.<a href="https://www.arduino.cc/en/software">Arduino IDE'yi buradan kendi bilgisayarınıza uygun olarak indirebilirsiniz</a>
+            </p>
+        </div>
+        <div id="ledblink">
+            <h3>Led blink</h3>
+            <p>
+                Arduinoda led blink ledin yanıp sönmesidir bu projede ledi 2. pine bağlıyacağız.
+            </p>
+            <img src="baglantisema/ledblink.png" alt="LEDBLİNK" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <p>
+                Malzemeler:
+            </p>
+
+            <ul style="list-style:square">
+                <li>Bir Arduino,Deneyap,ESP32 modülü veya herhangi bir devre kartı</li>
+                <li>1 tane breadboard</li>
+                <li>1 tane led</li>
+                <li>1 tane 330 Ω veya 220 Ω direnç</li>
+                <li>İki E-E jumper kablo</li>
+            </ul>
+            <pre class="koddur">
+int led=2; // led değişkenine 2'yi ata
+void setup()
+{
+pinMode(led,OUTPUT); //2 pinin çıkış olduğunu tanımla
+}
+void loop()
+{
+digitalWrite(led,HIGH); //led yak
+delay(1000); //1 saniye bekle
+digitalWrite(led,LOW); //led son
+delay(1000); //1 saniye bekle
+}
+</pre>
+        </div>
+        <div id="serial">
+            <h3>Serial monitör</h3>
+            <p>Serial monitör girilen veriyi ya da bir yazı yazar</p>
+            <p>Not bu fotoğraf tinkercaddden alınmıştır</p>
+            <img src="baglantisema/serialmonitor.png" alt="Serialmonitör" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <p>Malzemeler:</p>
+            <ul class="malzeme">
+                <li>Bir Arduino,Deneyap,ESP32 modülü veya herhangi bir devre kartı</li>
+            </ul>
+            <pre class="koddur">
+void setup()
+{
+Serial.begin(9600);//Serial haberşelme başladı
+Serial.println("Hello world");//Serial monitöre hello world yazıldı
+}
+void loop()
+{
+}
+</pre>
+            <p>Burada resimde bir kere olmasının sebebi setup içinde olması setup bir kere ,loop sürekli yapar. </p>
+        </div>
+        <div id="butonled">
+            <h3>Buton ile led yakma</h3>
+            <p>Şimdi burada yapılan projede butona tıklandığı sürede led yanacak.Led 4. pine bağlanacak. Button 2. pine bağlanacak</p>
+            <p>
+                Malzemeler:
+            </p>
+            <ul class="malzeme">
+                <li>Bir Arduino,Deneyap,ESP32 modülü veya herhangi bir devre kartı</li>
+                <li>1 tane breadboard</li>
+                <li>1 tane led</li>
+                <li>Bir tane 4 pinli buton</li>
+                <li>Bir tane 1 kΩ direnç</li>
+                <li>1 tane 330 Ω veya 220 Ω direnç</li>
+                <li>Beş E-E jumper kablo</li>
+            </ul>
+            <img src="baglantisema/ledbutton.png" alt="buttonled" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <pre class="koddur">
+int button=2; //button pini tanımlandı
+int led = 4; //led pini tanımlandı
+void setup()
+{
+pinMode(led,OUTPUT); //led çıkış olduğu tanımlandı(4. pin)
+pinMode(button,INPUT); //button giriş olduğu tanımlandı(2. pin)
+}
+void loop()
+{
+if(digitalRead(button==1)) // eğer buttondan gelen dijital veri 1 ise
+{
+digitalWrite(led,HIGH); // led yak
+}
+else //olmazsa
+{
+digitalWrite(led,LOW)//led sön
+}
+}
+</pre>
+        </div>
+        <div id="analogpot">
+            <h3>Analog veri okuma(Potansiyometre[POT])</h3>
+            <p>
+                Analog okuma arduino dijital okuma gibi 0,1 değilde 0 ile 1023 arasındaki sayılardadır isterseniz bu sayılar map komutu ile ayarlanabilir.Burada potu A0'a bağladık
+            </p>
+            <img src="baglantisema/analog.png" alt="analogdeger" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <p>
+                Malzemeler
+            </p>
+
+            <ul class="malzeme">
+                <li>Bir Arduino,Deneyap,ESP32 modülü veya herhangi bir devre kartı</li>
+                <li>1 tane breadboard</li>
+                <li>Üç E-E Jumper kablo</li>
+                <li>Bir tane potansiyometre</li>
+            </ul>
+
+
+            <pre class="koddur">
+int pot = A0; //pini A0'a tanımladık
+void setup()
+{
+Serial.begin(9600); //Serial monitör başlatıldı 9600 baytta  bunu görmek için serial monitör seçeneğine tıklamalısınız
+pinMode(pot,INPUT); // pot giriş olarak tanımlandı
+}
+void loop()
+{
+Serial.println(analogRead(pot));
+}
+</pre>
+        </div>
+        <div id="pwmled">
+            <h3>PWM ile Led yakma</h3>
+            <p>PWM digital bir pinin analog sinyal göndermesi olabilen pinleridrir Arduino Uno'da 3,,6,9,10,11 pinleri PWM'dir.Ledi pota bağlayıp gelen veriye göre led yakmak projemizdir.Burada A0 pini pot ,2. pin leddir.</p>
+            <img src="baglantisema/pwmled.png" alt="PWMLED" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <p>
+                Malzemeler
+            </p>
+            <ul class="malzeme">
+                <li>Bir Arduino,Deneyap,ESP32 modülü veya herhangi bir devre kartı</li>
+                <li>1 tane breadboard</li>
+                <li>Beş E-E Jumper kablo</li>
+                <li>Bir led</li>
+                <li> Bir tane 220 Ω direnç</li>
+                <li>Bir tane potansiyometre</li>
+            </ul>
+            <pre class="koddur">
+#define led 2
+#define pot A0
+void setup()
+{
+Serial.begin(9600); //Serial monitör başlatıldı 9600 baytta  bunu görmek için serial monitör seçeneğine tıklamalısınız
+}
+void loop()
+{
+  int deger=analogRead(pot); //deger'e potun analog değeri atandı'
+  deger=map(deger,0,1023,0,225); // 225'e çekti 1023'ten
+Serial.println(deger); // serial porta yazdır değeri
+analogWrite(led,deger); //analog değeri lede parlaklık ayarlarr
+}
+</pre>
+        </div>
+        <div id="karasimsek">
+            <h3>Kara şimşek ve Fonksiyon oluşturma</h3>
+            <p>Kara şimşek uygulaması birçok ledin art arda koyulmasıyla yapılır.Burada fonksiyon oluşturma kısmı kara şimşekte hangi ledlerin yanacağını belirtmekten geçer.Fonksiyonlar Arduino'da void fonksiyon_adi () { } bu şekilde yapılır.</p>
+            <img src="baglantisema/karasimsek.png" alt="karasimsek" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <p>Malzemeler</p>
+            <ul class="malzeme">
+                <li>Bir Arduino,Deneyap,ESP32 modülü veya herhangi bir devre kartı</li>
+                <li>1 tane breadboard</li>
+                <li>9 E-E Jumper kablo</li>
+                <li>8 led</li>
+                <li> 8 tane 220 Ω direnç</li>
+
+            </ul>
+            <pre class="koddur">
+int led=2; //ledlerin pinlerini tanımladık
+int led1=3;
+int led2=4;
+int led3=5;
+int led4=6;
+int led5=7;
+int led6=8;
+int led7=9;
+void setup()
+{
+ pinMode(led,OUTPUT); //ledlerin çıkış olduğunu belirttik
+  
+   pinMode(led1,OUTPUT); 
+   pinMode(led2,OUTPUT);
+   pinMode(led3,OUTPUT);
+   pinMode(led4,OUTPUT);
+   pinMode(led5,OUTPUT);
+   pinMode(led6,OUTPUT);
+   pinMode(led7,OUTPUT);
+  
+  //Serial monitör başlatıldı 9600 baytta  bunu görmek için serial monitör seçeneğine tıklamalısınız
+}
+void loop()
+{
+bir(); //bir fonksiyomunu çalıştır(fonksiyonların adında sıraya göre o led yanacak)
+  delay(500); //0,5 saniye bekle
+  iki();
+  delay(500);
+  uc();
+  delay(500);
+  dort();
+  
+  delay(500);
+  bes();
+  delay(500);
+  alti();
+  delay(500);
+  yedi();
+  delay(500);
+  sekiz();
+  delay(500);
+
+}
+void bir()
+{
+  digitalWrite(led,HIGH);
+  digitalWrite(led1,LOW);
+  digitalWrite(led2,LOW);
+  digitalWrite(led3,LOW);
+  digitalWrite(led4,LOW);
+  digitalWrite(led5,LOW);
+  digitalWrite(led6,LOW);
+  digitalWrite(led7,LOW);
+  
+}
+void iki()
+{
+  digitalWrite(led,LOW);
+  digitalWrite(led1,HIGH);
+  digitalWrite(led2,LOW);
+  digitalWrite(led3,LOW);
+  digitalWrite(led4,LOW);
+  digitalWrite(led5,LOW);
+  digitalWrite(led6,LOW);
+  digitalWrite(led7,LOW);
+  
+}
+void uc()
+{
+  digitalWrite(led,LOW);
+  digitalWrite(led1,LOW);
+  digitalWrite(led2,HIGH);
+  digitalWrite(led3,LOW);
+  digitalWrite(led4,LOW);
+  digitalWrite(led5,LOW);
+  digitalWrite(led6,LOW);
+  digitalWrite(led7,LOW);
+  
+}
+void dort()
+{
+  digitalWrite(led,LOW);
+  digitalWrite(led1,LOW);
+  digitalWrite(led2,LOW);
+  digitalWrite(led3,HIGH);
+  digitalWrite(led4,LOW);
+  digitalWrite(led5,LOW);
+  digitalWrite(led6,LOW);
+  digitalWrite(led7,LOW);
+
+}
+void bes()
+{
+  digitalWrite(led,LOW);
+  digitalWrite(led1,LOW);
+  digitalWrite(led2,LOW);
+  digitalWrite(led3,LOW);
+  digitalWrite(led4,HIGH);
+  digitalWrite(led5,LOW);
+  digitalWrite(led6,LOW);
+  digitalWrite(led7,LOW);
+  
+}
+void alti()
+{
+  digitalWrite(led,LOW);
+  digitalWrite(led1,LOW);
+  digitalWrite(led2,LOW);
+  digitalWrite(led3,LOW);
+  digitalWrite(led4,LOW);
+  digitalWrite(led5,HIGH);
+  digitalWrite(led6,LOW);
+  digitalWrite(led7,LOW);
+ 
+}
+void yedi()
+{
+  digitalWrite(led,LOW);
+  digitalWrite(led1,LOW);
+  digitalWrite(led2,LOW);
+  digitalWrite(led3,LOW);
+  digitalWrite(led4,LOW);
+  digitalWrite(led5,LOW);
+  digitalWrite(led6,HIGH);
+  digitalWrite(led7,LOW);
+  
+}
+void sekiz()
+{
+  digitalWrite(led,LOW);
+  digitalWrite(led1,LOW);
+  digitalWrite(led2,LOW);
+  digitalWrite(led3,LOW);
+  digitalWrite(led4,LOW);
+  digitalWrite(led5,LOW);
+  digitalWrite(led6,LOW);
+  digitalWrite(led7,HIGH);
+  
+}
+</pre>
+        </div>
+        <div id="ldr">
+            <h3>LDR(FOTOREZİSTÖR)</h3>
+            <p>Arduinoda ışık oranını algılayan bir sensör vardır bu LDR'dir.Şimdi ilk projede ldr'den gelen veriyi ölçeceğiz.2. projede ise karanlık olursa led yanacak</p>
+            <img src="baglantisema/ldr.png" alt="ldr" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <p>Malzemeler</p>
+            <ul class="malzeme">
+                <li>Bir Arduino,Deneyap,ESP32 modülü veya herhangi bir devre kartı</li>
+                <li>1 tane breadboard</li>
+                <li>4 E-E Jumper kablo</li>
+
+                <li> 1 tane 1 KΩ direnç</li>
+
+            </ul>
+            <pre class="koddur">
+int ldr=A0;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(ldr,INPUT);
+
+}
+void loop()
+{
+int deger=analogRead(ldr);
+  deger=map(deger,0,1023,0,100);
+Serial.println(deger);  
+}
+</pre>
+            <p>İkinci porje</p>
+            <img src="baglantisema/ldrled.png" alt="ldrled" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <p>Malzemeler</p>
+            <ul class="malzeme">
+                <li>Bir Arduino,Deneyap,ESP32 modülü veya herhangi bir devre kartı</li>
+                <li>1 tane breadboard</li>
+                <li>6 E-E Jumper kablo</li>
+                <li>1 tane led</li>
+                <li> 1 tane 1 KΩ ve 220 Ω direnç</li>
+            </ul>
+            <pre class="koddur">
+int ldr=A0;
+int led =2;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(ldr,INPUT);
+  pinMode(led,OUTPUT);
+
+}
+void loop()
+{
+int deger=analogRead(ldr);
+  deger=map(deger,0,1023,0,100);
+Serial.println(deger);  
+  if(deger>70)
+  {
+    digitalWrite(led,HIGH);
+  }
+  else
+  {
+    digitalWrite(led,LOW);
+  }
+}
+</pre>
+        </div>
+        <div id="rgb">
+            <h3>RGB LED</h3>
+            <p>RGB led Arduino'da <b style="color:red">R</b>ed <b style="color:green">G</b>reen <b style="color:blue">B</b>lue'dan yani kırmızı mavi yeşilden oluşur.</p>
+            <img src="baglantisema/.rgb.png" alt="RGB" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <p>Malzemeler:</p>
+            <ul class="malzeme">
+                <li>Bir Arduino,Deneyap,ESP32 modülü veya herhangi bir devre kartı</li>
+                <li>1 tane breadboard</li>
+                <li>4 E-E Jumper kablo</li>
+                <li>1 tane RGB led</li>
+                <li> 3 tane  220 Ω direnç</li>
+            </ul>
+            <pre class="koddur">
+int r=3;
+int g=6;
+int b=5;
+void setup()
+{
+  pinMode(r,OUTPUT);
+   pinMode(g,OUTPUT);
+   pinMode(b,OUTPUT);
+}
+void loop()
+{
+  red();
+  delay(500);
+  blue();
+  delay(500);
+  green();
+  delay(500);
+  yellow();
+  delay(500);
+  pruple();
+  delay(500);
+  turkuaz();
+  delay(500);
+  white();
+  delay(500);
+}
+void red()
+{
+  digitalWrite(r,HIGH);
+  digitalWrite(g,LOW);
+  digitalWrite(b,LOW);
+}
+void blue()
+{
+  digitalWrite(r,LOW);
+  digitalWrite(g,LOW);
+  digitalWrite(b,HIGH);
+}
+void green()
+{
+  digitalWrite(r,LOW);
+  digitalWrite(g,HIGH);
+  digitalWrite(b,LOW);
+}
+void yellow()
+{
+  digitalWrite(r,HIGH);
+  digitalWrite(g,HIGH);
+  digitalWrite(b,LOW);
+}
+void pruple()
+{
+  digitalWrite(r,HIGH);
+  digitalWrite(g,LOW);
+  digitalWrite(b,HIGH);
+}
+void turkuaz()
+{
+  digitalWrite(r,LOW);
+  digitalWrite(g,HIGH);
+  digitalWrite(b,HIGH);
+}
+void white()
+{
+  digitalWrite(r,HIGH);
+  digitalWrite(g,HIGH);
+  digitalWrite(b,HIGH);
+}
+</pre>
+        </div>
+        <div id="dht11">
+            <h3>SICAKLIK VE NEM SENSÖRÜ DHT11 VE KÜTÜPHANE ÇAĞIRMA</h3>
+            <p>Sıcaklık ve nem ölçmek için Aduinoda farklı sensörler kullanılır biz burada DHT11'i kullanacağız.Pin 7. bağlı <a href="https://www.hbmacit.com/wp-content/uploads/2022/01/dht.zip">DHT.h kütüphanesini indirmek için tıklayın ya da şu  yolu deneyin</a></p>
+            <img src="baglantisema/Ekran görüntüsü 2024-10-19 095347.png" alt="kütüphane" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <p>Buraya tıklayıp istediğiniz kütüphaneyi yazıp indirebilirsiniz ve  sol üstteki <b>Sketch'ten Include library'ye tıklayıp onu kullanabilir bağlantıda verdiğimiz gibi ADD zip library seçeneğine tıklayaabililrsiniz</b></p>
+            <img src="https://www.hbmacit.com/wp-content/uploads/2020/01/ArduDHT11-module-644x416.png" alt="dht11" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <ul class="malzeme">
+                <li>Bir Arduino,Deneyap,ESP32 modülü veya herhangi bir devre kartı</li>
+                <li>3 tane E-D jumper kablo</li>
+                <li>DHT11</li>
+            </ul>
+            <pre class="koddur">
+#include "DHT.h"  //DHT kütüphanesini çağır
+int DHTPIN 7  // DHT sensörün bağlı olduğu pini tanımla
+DHT dht(DHTPIN, DHT11);  // dht adında sensör nesnesi tanımla. 
+ 
+void setup() {
+  Serial.begin(9600);  //Seri portu aç
+  dht.begin();  //dht sensörü başlat
+}
+
+void loop() {
+  delay(2000); // Sensörden bir sonraki veriyi almak için 2sn bekle 
+  float nem = dht.readHumidity(); // Nem miktarını oku
+  float sicaklik = dht.readTemperature();  //Sıcaklık bilgisini oku
+  // Seri port ekranına okunan değerleri yazdır.
+  Serial.print("Nem: Yüzde ");      
+  Serial.print(nem  );
+  Serial.print(" Sıcaklık: ");
+  Serial.print(sicaklik);
+  Serial.println(" C");
+}
+</pre>
+        </div>
+        <div id="metre">
+            <h3>Ultrasonik mesafe sensörü HC-SR04</h3>
+            <p>HC-SR04 yarasaların sistemine benzetilebilir çünkü HC-SR04'te sesin yansıyıp geri dönme süresini ölçerek belli bir denklemle yapılır</p>
+            <img src="baglantisema/hcsr04.png" alt="hcsr04" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <p>Malzemeler</p>
+            <ul class="malzeme">
+                <li>Bir Arduino,Deneyap,ESP32 modülü veya herhangi bir devre kartı</li>
+                <li>1 tane breadboard</li>
+                <li>4 E-E Jumper kablo</li>
+                <li>1 tane HC-SR04</li>
+
+            </ul>
+            <pre class="koddur">
+int trigPin = 13; 
+int echoPin = 12;  
+ 
+long zaman;
+long mesafe;
+ 
+void setup(){
+  pinMode(trigPin, OUTPUT); 
+  pinMode(echoPin,INPUT); 
+  Serial.begin(9600); 
+}
+void loop()
+{
+  digitalWrite(trigPin, LOW); 
+  delayMicroseconds(5);
+  digitalWrite(trigPin, HIGH); 
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);  
+  zaman = pulseIn(echoPin, HIGH);
+  mesafe= (zaman /29.1)/2;    
+  Serial.print("Uzaklik ");  
+  Serial.print(mesafe);
+  Serial.println(" cm");  
+  delay(500); 
+}
+</pre>
+        </div>
+        <div id="servo">
+            <h3>JOYSTİCK VE SERVO</h3>
+            <p>Joystick ve serovda joystickden gelen x y konumlsrına göre 2 servo hareket edecek.Servo dereceli motor gibi düşünebilirsiniz fakat bazı servolar sürekli bir yönde döner o nedenle sahip olduğunuz servonun projeye uygun olup olmadığına dikkat edin</p>
+            <b>Burada Servo.h kütüphanesi kullanılacak</b>
+            <img src="https://www.omerfarukyildiz.com/wp-content/uploads/2021/02/joystick-devre-proje-2-sema-ANA-1024x653.png" alt="servo joystick" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <p>Malzemeler:</p>
+            <ul class="malzeme">
+                <li>Bir Arduino,Deneyap,ESP32 modülü veya herhangi bir devre kartı</li>
+                <li>1 tane breadboard</li>
+                <li>12 E-E JUMPER KABLO VE 4 E-D JUMPER KABLO </li>
+                <li>1 tane Joystick </li>
+                <li>2 tane servo</li>
+            </ul>
+            <pre class="koddur">
+#include <Servo.h> //servo kutuphanesi tanımladık.
+int servox = 8; //X ekseninin servosunu tanımladık.
+int servoy = 9; //Y ekseninin servosunu tanımladık.
+int xekseni = A0; //Joystickten gelen x ekseninin tanımladık.
+int yekseni= A1; //Joystickten gelen x ekseninin tanımladık.
+int servoacimin = 0; // Servo degerlerinin acısını sınırlanırını belirledik.
+int servoacimax = 180; // Servo degerlerinin acısını sınırlanırını belirledik.
+Servo servoydeger; //Kutuphaneden tanımlama yapıyoruz.
+Servo servoxdeger; //Kutuphaneden tanımlama yapıyoruz.
+int deger1; // Gerekli degişkenleri tanımlıyoruz.
+int deger2;
+int deger3;
+int deger4;
+void setup()
+{
+servoydeger.attach(servox); //Servo hareketi için gerekli olan portlar açılıyor.
+servoxdeger.attach(servoy); //Servo hareketi için gerekli olan portlar açılıyor.
+}
+void loop()
+{
+deger1 = analogRead(xekseni); //deger1 degişkenine analog deger tanımlanıyor.
+deger3 = analogRead(yekseni); //deger3 degişkenine analog deger tanımlanıyor.
+deger2  = map(deger1, 0, 1023, servoacimin , servoacimax); //deger 2 degişkeninde x servosunun sınırları belirleniyor.
+deger4  = map(deger3, 0, 1023, servoacimin , servoacimax); //deger 4 degişkeninde y servosunun sınırları belirleniyor.
+servoydeger.write(deger2); 
+servoxdeger.write(deger4);
+  delay(10); // bu islemlerin süresi 1 milisaniye olarak belirleniyor.
+}
+</pre>
+        </div>
+        <div id="IRSensör">
+            <h3>IR SENSÖR</h3>
+            <p>Ir sensör kızılötesi ışık algılayan sensördür burada kullanılan kütüphane son model değil 1.0.0 IRREMOTE kütüphanesi olacaktır.Bu projede kızıl ötesi kumandadan değer okunacak</p>
+            <img src="baglantisema/ir.png" alt="ir" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <p>Malzemeler:</p>
+            <ul class="malzeme">
+                <li>Bir Arduino,Deneyap,ESP32 modülü veya herhangi bir devre kartı</li>
+                <li>1 tane breadboard</li>
+                <li>3 E-E JUMPER KABLO</li>
+                <li>1 tane İR sensör</li>
+            </ul>
+            <pre class="koddur">
+#include &lt;IRremote.h&gt;
+int RECV_PIN = 2;
+IRrecv irrecv(RECV_PIN);
+decode_results results;
+void setup()
+{
+  Serial.begin(9600);
+  irrecv.enableIRIn();
+}
+void loop()
+{
+  if (irrecv.decode( & results)) {
+    Serial.println(results.value,HEX);
+  irrecv.resume();
+  }
+}
+</pre>
+        </div>
+        <div id="pır">
+            <h3>PIR sensörü</h3>
+            <p>PIR sensörü hareket senssörüdür.Mesela tuvaletlerde otonom ışık bu hareket sensörlerinden gelen veriye göre harekete eder.</p>
+            <img src="baglantisema/pır.png" alt="pır" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <p>Malzemeler:</p>
+            <ul class="malzeme">
+                <li>Bir Arduino,Deneyap,ESP32 modülü veya herhangi bir devre kartı</li>
+                <li>1 tane breadboard</li>
+                <li>3 E-E JUMPER KABLO</li>
+                <li>1 tane pır sensörü</li>
+            </ul>
+            <pre class="koddur">
+int p=2;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(p,INPUT);
+}
+void loop()
+{
+ 	int deger=digitalRead(p);
+  Serial.println(deger);
+}
+</pre>
+        </div>
+        <div id="nem">
+            <h3>Toprak nem sensörü</h3>
+            <p>Toprak nem sensörü adı üstünde toprak nem sensörüdür.<b>burada yapılacak devre şemasında tek gösterilir ama iki farklı girişi vardır analog ve dijital olarak ürün 2 parça olabilir ama tinkercad sebebiyle ürün tek parça biz burada dijital sinyal kullandık</b></p>
+            <img src="baglantisema/nemi.png" alt="NEM" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <ul class="malzeme">
+                <li>Bir Arduino,Deneyap,ESP32 modülü veya herhangi bir devre kartı</li>
+                <li>1 tane breadboard</li>
+                <li>3 E-D JUMPER KABLO</li>
+                <li>1 tane toprak nem sensörü</li>
+            </ul>
+            <pre class="koddur">
+int nemsensor=2;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(nemsensor,INPUT);
+}
+void loop()
+{
+ 	int deger=digitalRead(nemsensor); 
+
+  Serial.println(deger);
+}
+</pre>
+        </div>
+        <div id="gaz_sensörü">
+            <h3>Gaz sensörü</h3>
+            <p>Gaz sensörü burada insan yararına zararlı gazları algılar</p>
+            <img src="https://maker.robotistan.com/wp-content/uploads/2019/06/gaz-1068x552.jpg" alt="gaz" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <ul class="malzeme">
+                <li>Bir Arduino,Deneyap,ESP32 modülü veya herhangi bir devre kartı</li>
+                <li>1 tane breadboard</li>
+                <li>7 E-E JUMPER KABLO</li>
+                <li>1 tane buzzer </li>
+                <li>Bir tane MQ-2 gaz sensörü</li>
+            </ul>
+            <pre class="koddur">
+int esikDegeri = 400; //Gaz eşik değerini belirliyoruz.    
+int buzzerPin = 9; //Buzzerın takılacağı pin
+int deger; //Sensörden okunan değer
+void setup() {
+  pinMode(buzzerPin, OUTPUT); //Buzzer pinimizi çıkış olarak ayarlıyoruz.
+}
+void loop() {
+  deger = analogRead(A0); //Sensörden analog değer okuyoruz.
+  if (deger > esikDegeri) { //Sensörden okunan değer eşik değerinden büyükse çalışır.
+    digitalWrite(buzzerPin, HIGH);
+    delay(100);
+    digitalWrite(buzzerPin, LOW);
+    delay(100);
+  } else { //Sensörden okunan değer eşik değerinin altındaysa çalışır.
+    digitalWrite(buzzerPin, LOW);
+  }
+}
+</pre>
+        </div>
+        <div id="hc05">
+            <h3>Bluetooth</h3>
+            <p>Burada Bluetooth sensörü HC-05  veya HC06 olması lazım birde kalibrasyonu yapılmış olması lazım.Bluettoh haberlşeme için bir uygulama indirin bluetooth modülüne bağlanın ve istenilen tuşları gidecek verileri girn ya da haberleşme alanına uygulamaya göre değişir</p>
+            <img src="https://www.arduinomedia.com/wp-content/uploads/2019/05/bluetooth-arduino-baglanti-pin-tablosu.jpg" alt="konfigurasyon" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <pre class="koddur">
+#include &lt;SoftwareSerial.h&gt;
+SoftwareSerial BTSerial(10, 11); // TX | RX
+int STATE=9;  // STATE pin arduino bağlantısı
+ 
+void setup()
+{
+pinMode(9, OUTPUT);   // STATE pini çıkış pini olarak atandı
+digitalWrite(STATE, HIGH); // STATE pine güç verdik
+Serial.begin(9600);
+Serial.println("Konfigürasyon Modu Açık:");
+BTSerial.begin(38400);  
+}
+ 
+void loop()
+{
+if (BTSerial.available())
+Serial.write(BTSerial.read());
+if (Serial.available())
+BTSerial.write(Serial.read());
+}
+</pre>
+            <img src="https://www.arduinomedia.com/wp-content/uploads/2019/05/arduino-bluetooth-at-komutlari.jpg" alt="seri" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <p>
+                AT+NAME?: Bu komut ile modülün diğer cihazlarda görünen adını görüntüleyebiliriz. Standart olarak HC-05 gelecektir. <br />
+                AT+NAME=yeni_isim : Bu komut ile modülün ismini değiştirebiliyoruz. yeni_isim yazan yere istediğiniz bir isim belirleyebilirsiniz. Türkçe karakterler kullanmayınız.<br />
+                AT+PSWD?: Bu komut ile modülün şifresini görüntüleyebiliriz. Standart şifre 1234 olarak belirlenmiştir.<br />
+                AT+PSWD=yeni_şifre :Bu komut ile  modülün şifresini değiştirebiliyoruz. yeni_şifre yazan yere istediğiniz bir şifre belirleyebilirsiniz. Türkçe karakterler kullanmayınız.<br />
+                AT+ROLE? : Bu komut ile  modülün kullanıldığı modu görüntüleyebiliriz. Slave:0, Master:1 , ve Loop-Slave:2 olarak gelecektir. Fabrika ayarı olarak 0 yani slave mod değeri ekrana yazılacaktır.<br />
+                AT+ROLE=1: Bu komut ile bluetooth modülün rol modunu değiştirebilirsiniz.<br />
+                AT+VERSION? : Bluetooth versiyonunu öğreniyoruz.<br />
+                AT+ORGL: Bu komut ile modülü fabrika ayarlarına alır ve tüm ayarları resetler. Bluetooth modül şifresini unuttuğunuzda kullanabilirsiniz.<br />
+                AT+ADDR? :Bu komut ile bluetooth modülün adresini öğreniyoruz.<br />
+                AT+UART? :Bu komut ile bluetooth modülün baunt rate ayarını görüntüleyebiliriz.<br />
+                AT+UART=9600,0,0 :Bu komut ile bluetooth modülün baunt rate ayarını değiştirebiliriz.
+            </p>
+            <p>Konfigurasyonu tamamladık şimdir bağlantı ve bluetooth'a geçiyoruz</p>
+            <img src="https://maker.robotistan.com/wp-content/uploads/2015/10/bluetooth-rgb_bb.png" alt="rgbblue" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <pre class="koddur">
+#include &lt;softwareserial.h&gt;
+int veri; //Bluetooth üzerinden okuduğumuz değişken.
+int kirmiziPin = 9; //RGB Ledin kırmızı bacağının takılacağı pin
+int yesilPin = 10; //RGB Ledin yeşil bacağının takılacağı pin       
+int maviPin = 11; //RGB Ledin mavi bacağının takılacağı pin
+void setup() {
+  Serial.begin(9600); //Seri haberleşmeyi başlatıyoruz.
+  pinMode(kirmiziPin, OUTPUT); //Kırmızı pinini OUTPUT olarak ayarlıyoruz.
+  pinMode(yesilPin, OUTPUT); //Yeşl pinini OUTPUT olarak ayarlıyoruz.
+  pinMode(maviPin, OUTPUT); //Mavi pinini OUTPUT olarak ayarlıyoruz.
+}
+void loop() {
+  if (Serial.available() & gt; 0) { //Seri haberleşmeden veri gelmesini bekliyoruz.
+    veri = Serial.read(); //Seri haberleşmeden gelen veriyi okuyoruz.
+  }
+  if (veri == 'k') { //Seri haberleşmeden k harfi geldiğinde bu kısım çalışır.
+    digitalWrite(kirmiziPin, LOW);
+    digitalWrite(yesilPin, HIGH);
+    digitalWrite(maviPin, HIGH);
+  } else if (veri == 'y') { //Seri haberleşmeden y harfi geldiğinde bu kısım çalışır.
+    digitalWrite(kirmiziPin, HIGH);
+    digitalWrite(yesilPin, LOW);
+    digitalWrite(maviPin, HIGH);
+  } else if (veri == 'm') { //Seri haberleşmeden m harfi geldiğinde bu kısım çalışır.
+    digitalWrite(kirmiziPin, HIGH);
+    digitalWrite(yesilPin, HIGH);
+    digitalWrite(maviPin, LOW);
+  } else { //Seri haberleşmeden tanımlanmayan veri geldiğinde bu kısım çalışır.
+    digitalWrite(kirmiziPin, HIGH);
+    digitalWrite(yesilPin, HIGH);
+    digitalWrite(maviPin, HIGH);
+  }
+}
+</pre>
+        </div>
+        <div id="lcd">
+            <h3>LCD EKRAN I2C</h3>
+            <p>Ekrandır bu ekrana I2C olabilir bizi ikisinide yapacağız</p>
+            <img src="baglantisema/i.png" alt="lcd" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <br />
+
+            <b>VEYA</b>
+            <br />
+            <img src="baglantisema/Epic Lahdi.png" alt="lcd" class="container resim" style="display: flex; justify-content: center; align-items: center; max-width: 100%;" />
+            <br />
+            <b>I2C</b>
+            <pre class="koddur">
+// C++ code
+//
+#include &lt;Adafruit_LiquidCrystal.h&gt;
+
+int seconds = 0;
+
+Adafruit_LiquidCrystal lcd_1(0);
+
+void setup()
+{
+  lcd_1.begin(16, 2);
+
+  lcd_1.print("hello world");
+}
+
+void loop()
+{
+  lcd_1.setCursor(0, 1);
+  lcd_1.print(seconds);
+  lcd_1.setBacklight(1);
+  delay(500); // Wait for 500 millisecond(s)
+  lcd_1.setBacklight(0);
+  delay(500); // Wait for 500 millisecond(s)
+  seconds += 1;
+}
+</pre>
+            <b>LCD EKRAN</b>
+            <pre class="koddur">
+// C++ code
+//
+/*
+  LiquidCrystal Library - Hello World
+
+   Demonstrates the use of a 16x2 LCD display.
+  The LiquidCrystal library works with all LCD
+  displays that are compatible with the  Hitachi
+  HD44780 driver. There are many of them out
+  there, and you  can usually tell them by the
+  16-pin interface.
+
+  This sketch prints "Hello World!" to the LCD
+  and shows the time.
+
+  The circuit:
+  * LCD RS pin to digital pin 12
+  * LCD Enable pin to digital pin 11
+  * LCD D4 pin to digital pin 5
+  * LCD D5 pin to digital pin 4
+  * LCD D6 pin to digital pin 3
+  * LCD D7 pin to digital pin 2
+  * LCD R/W pin to ground
+  * LCD VSS pin to ground
+  * LCD VCC pin to 5V
+  * 10K resistor:
+  * ends to +5V and ground
+  * wiper to LCD VO pin (pin 3)
+
+  Library originally added 18 Apr 2008  by David
+  A. Mellis
+  library modified 5 Jul 2009  by Limor Fried
+  (http://www.ladyada.net)
+  example added 9 Jul 2009  by Tom Igoe
+  modified 22 Nov 2010  by Tom Igoe
+
+  This example code is in the public domain.
+
+  http://www.arduino.cc/en/Tutorial/LiquidCrystal
+*/
+
+#include &lt;LiquidCrystal.h>
+
+int seconds = 0;
+
+LiquidCrystal lcd_1(12, 11, 5, 4, 3, 2);
+
+void setup()
+{
+  lcd_1.begin(16, 2); // Set up the number of columns and rows on the LCD.
+
+  // Print a message to the LCD.
+  lcd_1.print("hello world!");
+}
+
+void loop()
+{
+  // set the cursor to column 0, line 1
+  // (note: line 1 is the second row, since counting
+  // begins with 0):
+  lcd_1.setCursor(0, 1);
+  // print the number of seconds since reset:
+  lcd_1.print(seconds);
+  delay(1000); // Wait for 1000 millisecond(s)
+  seconds += 1;
+}
+</pre>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿body {
+    background-color: lightblue;
+}
+
+div {
+    background-color: lightblue;
+}
+
+h2, h3, h4, h5 {
+    text-align: center;
+}
+
+.koddur {
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+}
+
+.resim {
+    width: 700px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+.dropdown-menu {
+    max-width: 100%;
+    white-space: nowrap; /* İçerik taşmasın diye öğeler yatay sırada kalır */
+}

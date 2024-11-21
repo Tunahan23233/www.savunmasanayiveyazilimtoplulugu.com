@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>SAVUNMA SANAYİ VE YAZILIM TOPLULUĞU</title>
+    <link href="Anasayfatasarım.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="anasayfajquery.js">
+    </script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-body-tertiary fixed-top" id="navdir">
+        <div class="container-fluid bg-danger">
+
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Anasayfa.html"><img src="csharpnet/tr.jpg" id="treew"style="width:50px;height:50px" /></a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Yazılımlar
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-scrollable">
+                            <li><a class="dropdown-item" href="csharp.html">C# .NET.Farework</a></li>
+                            <li><a class="dropdown-item" href="CPLUSPLUS.html">C++(Arduino)</a></li>
+                            <li><a class="dropdown-item" href="HTMLYAZILIMDILI.html">HTML</a></li>
+                            <li><a class="dropdown-item" href="veritabanı.html">MYSQL</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Ünlü TÜRK SAVUNMA SANAYİ Projeleri
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-scrollable">
+                            <li><a class="dropdown-item" href="https://wwwcdn.aselsan.com/api/file/HISAR-A_TR.pdf" download="https://wwwcdn.aselsan.com/api/file/HISAR-A_TR.pdf">HİSAR A+(Hava Savunma >Aselsan)</a></li>
+                            <li><a class="dropdown-item" href="https://wwwcdn.aselsan.com/api/file/GOKER_TR.pdf" download="https://wwwcdn.aselsan.com/api/file/GOKER_TR.pdf">Göker( Hava savunma >Aselsan)</a></li>
+                            <li><a class="dropdown-item" href="https://wwwcdn.aselsan.com/api/file/HISAR_O_100_TR.pdf" download="https://wwwcdn.aselsan.com/api/file/HISAR_O_100_TR.pdf">Hisar O 100( Hava Savunma>Aselsan)</a></li>
+                            <li><a class="dropdown-item" href="https://wwwcdn.aselsan.com/api/file/GOKDENIZ_TR-(1)-(1).pdf" download="https://wwwcdn.aselsan.com/api/file/GOKDENIZ_TR-(1)-(1).pdf">Gökdeniz( Savunma Sistemleri>Aselsan)</a></li>
+                            <li><a class="dropdown-item" href="https://wwwcdn.aselsan.com/api/file/ASLAN_TR.pdf" download="https://wwwcdn.aselsan.com/api/file/ASLAN_TR.pdf">Aslan(İKA>Aselsan)</a></li>
+                            <li><a class="dropdown-item" href="https://wwwcdn.aselsan.com/api/file/MARLIN_TR.pdf" download="https://wwwcdn.aselsan.com/api/file/MARLIN_TR.pdf">Marlin(İDA>Aselsan)</a></li>
+                            <li><a class="dropdown-item" href="https://cdn.bayraktartech.az/media/documents/5jbBlmG8SEa4VZHLyAXnICFraIX4WQO5.pdf" download="https://cdn.bayraktartech.az/media/documents/5jbBlmG8SEa4VZHLyAXnICFraIX4WQO5.pdf">Bayraktar TB2(S/İHA>BAYKAR)</a></li>
+                            <li><a class="dropdown-item" href="https://wwwcdn.aselsan.com/api/file/SIPER_TR.pdf" download="https://wwwcdn.aselsan.com/api/file/SIPER_TR.pdf">Siper(Savunma>Aselan)</a></li>
+                            <li><a class="dropdown-item" href="https://www.fnss.com.tr/uploads/docs/2024TRCATALOGUE/1713878170_zaha-brosur-2024-tr.pdf?1713878207" download="https://www.fnss.com.tr/uploads/docs/2024TRCATALOGUE/1713878170_zaha-brosur-2024-tr.pdf?1713878207">Zırhlı Amfibi Hücum Aracı (ZAHA)(HücumAracı>FNSS)</a></li>
+                            <li><a class="dropdown-item" href="https://www.roketsan.com.tr/uploads/docs/kataloglar/TR/2024/1726595694_som-j.pdf" download="https://www.roketsan.com.tr/uploads/docs/kataloglar/TR/2024/1726595694_som-j.pdf">SOM-J(Roket/Mühimmat>Roketsan)</a></li>
+                            <li><a class="dropdown-item" href="https://www.roketsan.com.tr/uploads/docs/kataloglar/TR/2024/1726595651_mam-c.pdf" download="https://www.roketsan.com.tr/uploads/docs/kataloglar/TR/2024/1726595651_mam-c.pdf">MAM-C(Roket/Mühimmat >Roketsan)</a></li>
+                            <li><a class="dropdown-item" href="https://www.roketsan.com.tr/uploads/docs/kataloglar/TR/2024/1726595370_cakir.pdf" download="https://www.roketsan.com.tr/uploads/docs/kataloglar/TR/2024/1726595370_cakir.pdf">Çakır(Mühimmat /Roket>Roketsan)</a></li>
+                            <li><a class="dropdown-item" href="https://www.roketsan.com.tr/uploads/docs/kataloglar/TR/2024/1726595374_alpagut.pdf" download="https://www.roketsan.com.tr/uploads/docs/kataloglar/TR/2024/1726595374_alpagut.pdf">Alpagut(Mühimmat/Roket>Roketsan)</a></li>
+                            <li><a class="dropdown-item" href="https://www.havelsan.com/uploads/docs/urunler/askeri-simulasyon/1720962229_keskin-nisanci-simulatoru-brosur.pdf" download="https://www.havelsan.com/uploads/docs/urunler/askeri-simulasyon/1720962229_keskin-nisanci-simulatoru-brosur.pdf">Keskin Nişancı Simulsayonu(Simulasyon>Havelsan)</a></li>
+                            <li><a class="dropdown-item" href="https://www.havelsan.com/uploads/docs/urunler/askeri-simulasyon/1720962870_atis-egitim-simulatoru-brosur.pdf" download="https://www.havelsan.com/uploads/docs/urunler/askeri-simulasyon/1720962870_atis-egitim-simulatoru-brosur.pdf">Atış Eğitim Simülatorü(Simülasyon >Havelsan)</a></li>
+                            <li><a class="dropdown-item" href="https://www.havelsan.com/en/solutions/malazgirt-serious-game-infrastructure">Malazgirt Oyunu(Video Oyunu >Havelsan)</a></li>
+                            <li><a class="dropdown-item" href="https://cdn.baykartech.com/media/upload/userFormUpload/f2rHd0SY7GSlqBMPIjaONR0i6h3bQuS6.pdf" download="https://cdn.baykartech.com/media/upload/userFormUpload/f2rHd0SY7GSlqBMPIjaONR0i6h3bQuS6.pdf">Cezeri(Hava Aracı>Baykar)</a></li>
+                            <li><a class="dropdown-item" href="https://cdn.baykartech.com/media/upload/userFormUpload/tF5X9aaBWXoTQVvD6QUYIb0mzABo162N.pdf" download="https://cdn.baykartech.com/media/upload/userFormUpload/tF5X9aaBWXoTQVvD6QUYIb0mzABo162N.pdf">Bayraktar DİHA(S/İHA >BAYKAR)</a></li>
+                            <li><a class="dropdown-item" href="https://cdn.baykartech.com/media/upload/userFormUpload/cihK0xkRPRAUs5T2atGIB4f8vrXh7kRn.pdf" download="https://cdn.baykartech.com/media/upload/userFormUpload/cihK0xkRPRAUs5T2atGIB4f8vrXh7kRn.pdf">Mini İHA(S/İHA>BAYKAR)</a></li>
+                            <li><a class="dropdown-item" href="https://cdn.baykartech.com/media/upload/userFormUpload/HBcOgjepsmzRJt2sx78aJTjzGBedlzLw.pdf" download="https://cdn.baykartech.com/media/upload/userFormUpload/HBcOgjepsmzRJt2sx78aJTjzGBedlzLw.pdf">Bayraktar Akıncı(TİHA>BAYKAR)</a></li>
+                            <li><a class="dropdown-item" href="https://www.me-canik.com/pdf/canik_en.pdf" download="https://www.me-canik.com/pdf/canik_en.pdf">Canik Silah(Silah>Canik)</a></li>
+                            <li><a class="dropdown-item" href="https://www.canikarms.com/pdf/canik.pdf" download="https://www.canikarms.com/pdf/canik.pdf">CANİK TP SERİSİ(SİLAH >CANİK)</a></li>
+                            <li><a class="dropdown-item" href="https://www.fnss.com.tr/uploads/docs/2024TRCATALOGUE/1713877477_kaplan-mt-brosur-2024-tr.pdf?1713877493" download="https://www.fnss.com.tr/uploads/docs/2024TRCATALOGUE/1713877477_kaplan-mt-brosur-2024-tr.pdf?1713877493">Kaplan Hafif Tank</a></li>
+                            <li><a class="dropdown-item" href="https://www.fnss.com.tr/uploads/docs/kaplan-apc/1729572934_kaplan-zpt-tr-2024.pdf?1729572944" download="https://www.fnss.com.tr/uploads/docs/kaplan-apc/1729572934_kaplan-zpt-tr-2024.pdf?1729572944">KAPLAN ZPT(ZIRHLI PERSONEL TAŞIYICI>FNSS)</a></li>
+                            <li><a class="dropdown-item" href="https://www.fnss.com.tr/uploads/docs/2024TRCATALOGUE/1713877151_akinci-zma-brosur-2024-tr.pdf?1713877180" download="https://www.fnss.com.tr/uploads/docs/2024TRCATALOGUE/1713877151_akinci-zma-brosur-2024-tr.pdf?1713877180">Akıncı ZMA (Paletli zıhlır Muharabe aracı>FNSS)</a></li>
+                            <li><a class="dropdown-item" href="https://www.fnss.com.tr/uploads/docs/2024TRCATALOGUE/1713879980_pars-izci-8x8-brosur-2024-tr.pdf?1713880028" download="https://www.fnss.com.tr/uploads/docs/2024TRCATALOGUE/1713879980_pars-izci-8x8-brosur-2024-tr.pdf?1713880028">PARS İZCİ 8x8(Taktik Tekerlekli Zırhlı Araç>FNSS)</a></li>
+                            <li><a class="dropdown-item" href="https://www.fnss.com.tr/uploads/docs/2024TRCATALOGUE/1713879789_pars-izci-6x6-brosur-2024-tr.pdf?1713879815" download="https://www.fnss.com.tr/uploads/docs/2024TRCATALOGUE/1713879789_pars-izci-6x6-brosur-2024-tr.pdf?1713879815">PARS İZCİ 6x6(Taktik Tekerlekli Zırhlı Araç>FNSS)</a></li>
+                            <li><a class="dropdown-item" href="https://www.fnss.com.tr/uploads/docs/alpha8x8/1706888757_pars-alpha-8x8-tr-2024-tri-fold.pdf?1706888757" download="https://www.fnss.com.tr/uploads/docs/alpha8x8/1706888757_pars-alpha-8x8-tr-2024-tri-fold.pdf?1706888757">PARS ALPHA 8x8(Zırhlı Muharebe aracı>FNSS)</a></li>
+                            <li><a class="dropdown-item" href="https://www.fnss.com.tr/uploads/docs/2024TRCATALOGUE/1713879570_pars-iv-8x8-brosur-2024-tr.pdf?1713879585" download="https://www.fnss.com.tr/uploads/docs/2024TRCATALOGUE/1713879570_pars-iv-8x8-brosur-2024-tr.pdf?1713879585">PARS IV 8x8(Taktik Tekerlekli Zırhlı Araç>FNSS)</a></li>
+                            <li><a class="dropdown-item" href="https://www.fnss.com.tr/uploads/docs/2024TRCATALOGUE/1713880224_ika-brosur-2024-tr.pdf?1713880235" download="https://www.fnss.com.tr/uploads/docs/2024TRCATALOGUE/1713880224_ika-brosur-2024-tr.pdf?1713880235">GÖLGE SÜVARİ(İKA>FNSS)</a></li>
+                            <li><a class="dropdown-item" href="https://www.tusas.com/content/files/uploads/229/TUSAS_2020_Genel_Flyer_Anka_TR.pdf" download="https://www.tusas.com/content/files/uploads/229/TUSAS_2020_Genel_Flyer_Anka_TR.pdf">ANKA (S/İHA>TUSAŞ)</a></li>
+                            <li><a class="dropdown-item" href="https://www.tusas.com/urunler/iha/operatif-stratejik-iha-sistemleri/anka-III" download="https://www.tusas.com/urunler/iha/operatif-stratejik-iha-sistemleri/anka-III">Anka 3(S/İHA>TUSAŞ)</a></li>
+                            <li><a class="dropdown-item" href="https://www.tusas.com/urunler/ucak/ozgun-gelistirme/kaan" download="https://www.tusas.com/urunler/ucak/ozgun-gelistirme/kaan">KAAN(5. Nesil Savaş Uçağı>TUSAŞ)</a></li>
+                            <li><a class="dropdown-item" href="https://www.stm.com.tr/uploads//docs/1706876979_taktik-mini-iha-sistemler.pdf?" download="https://www.stm.com.tr/uploads//docs/1706876979_taktik-mini-iha-sistemler.pdf?">Taktik Mini İha Sistemleri(S/İHA>STM)</a></li>
+                            <li><a class="dropdown-item" href="https://www.stm.com.tr/uploads//images/Neta/1729522072_stm-24-1201-mo-neta-brosur-tr-2.pdf?" download="https://www.stm.com.tr/uploads//images/Neta/1729522072_stm-24-1201-mo-neta-brosur-tr-2.pdf?">STM META(İNSANSIZ OTONOM SU ALTI ARACI>STM)</a></li>
+                            <li><a class="dropdown-item" href="https://www.stm.com.tr/uploads//docs/1706876986_deniz-projeleri.pdf?" download="https://www.stm.com.tr/uploads//docs/1706876986_deniz-projeleri.pdf?">DENİZ PROJELERİ STM(DENİZ SAVUNMA/SALDIRI>STM)</a></li>
+                            <li><a class="dropdown-item" href="https://www.havelsan.com/uploads/docs/urunler/otonom-sistemler/1721312065_barkan-brosur.pdf" download="https://www.havelsan.com/uploads/docs/urunler/otonom-sistemler/1721312065_barkan-brosur.pdf">BARKAN(İKA>HAVELSAN)</a></li>
+                            <li><a class="dropdown-item" href="https://www.havelsan.com/uploads/docs/urunler/otonom-sistemler/1721310227_kapgan-brosur.pdf" download="https://www.havelsan.com/uploads/docs/urunler/otonom-sistemler/1721310227_kapgan-brosur.pdf">KAPGAN(İKA>HAVELSAN)</a></li>
+                            <li><a class="dropdown-item" href="https://www.havelsan.com/uploads/docs/urunler/otonom-sistemler/1721312230_barkan-2-brosur.pdf" download="https://www.havelsan.com/uploads/docs/urunler/otonom-sistemler/1721312230_barkan-2-brosur.pdf">BARKAN 2(İKA>HAVELSAN)</a></li>
+                            <li><a class="dropdown-item" href="https://www.nurolmakina.com.tr/uploads/docs/katalog/tr/ejder-toma-4x4.pdf" download="https://www.nurolmakina.com.tr/uploads/docs/katalog/tr/ejder-toma-4x4.pdf">EJDER TOMA 4x4(TOMA>NUROL MAKİNE)</a></li>
+                            <li><a class="dropdown-item" href="https://www.nurolmakina.com.tr/uploads/docs/katalog/tr/ejder-yalcin-4x4.pdf" download="https://www.nurolmakina.com.tr/uploads/docs/katalog/tr/ejder-yalcin-4x4.pdf">Ejder Yalçın(Zırhlı Araç 4x4>Nurol Makine)</a></li>
+                            <li><a class="dropdown-item" href="https://www.nurolmakina.com.tr/uploads/docs/katalog/en/nms-4x4-en.pdf" download="https://www.nurolmakina.com.tr/uploads/docs/katalog/en/nms-4x4-en.pdf">NMS(Zırhlı Araç>Nurol Makine)</a></li>
+                            <li><a class="dropdown-item" href=" https://deryaarms.com/tr/kataloglar" download=" https://deryaarms.com/tr/kataloglar">Derya Arms Katalog(PDF olarak indire  tıklayın hiçbir indirme işlemi gerçekleşmeyecek)</a></li>
+                            <li><a class="dropdown-item" href="https://www.tei.com.tr/uploads/docs/1693075428_teitr.pdf" download="https://www.tei.com.tr/uploads/docs/1693075428_teitr.pdf">TEİ(MOTOR)</a></li>
+                            <li><a class="dropdown-item" href="https://www.mke.gov.tr/Urunler/MPT-55K-Piyade-Tufegi/40" download="https://www.mke.gov.tr/Urunler/MPT-55K-Piyade-Tufegi/40">MPT-55(SİLAH>MKE)</a></li>
+                            <li><a class="dropdown-item" href="https://www.mke.gov.tr/Urunler/MPT-76MH/2" download="https://www.mke.gov.tr/Urunler/MPT-76MH/2">MPT-76(Silah>KALE-KALIP ve MKE)</a></li>
+                            <li><a class="dropdown-item" href="https://www.mke.gov.tr/Urunler/JMK-Bora-12-Keskin-Nisanci-Tufegi/39" download="https://www.mke.gov.tr/Urunler/JMK-Bora-12-Keskin-Nisanci-Tufegi/39">BORA-12(Silah>MKE)</a></li>
+                            <li><a class="dropdown-item" href="https://www.targikielce.pl/storage/file/core_files/2023/8/3/914192cd8c3d6f8c2d5c1afbb8ee67f9/KALEKALIP-2023-CATALOGUE-compressed.pdf" download="https://www.targikielce.pl/storage/file/core_files/2023/8/3/914192cd8c3d6f8c2d5c1afbb8ee67f9/KALEKALIP-2023-CATALOGUE-compressed.pdf">KCR ailesi(Silah>Kale Kalıp)</a></li>
+                            <li><a class="dropdown-item" href="https://mke.gov.tr/Content/D_Dosya/ckResim/Programlar/ingilizce.pdf" download="https://mke.gov.tr/Content/D_Dosya/ckResim/Programlar/ingilizce.pdf">MKE Katalog(İngilizce)</a></li>
+                            <li><a class="dropdown-item" href="https://www.sarsilmaz.com/storage/urun-katalogu-5.pdf" download="https://www.sarsilmaz.com/storage/urun-katalogu-5.pdf">Sarsılmaz Kataloğu(Silah>Sarsılmaz)</a></li>
+                            <li><a class="dropdown-item" href="https://www.ssb.gov.tr/WebSite/contentlist.aspx?PageID=373&LangID=1" download="https://www.ssb.gov.tr/WebSite/contentlist.aspx?PageID=373&LangID=1">TCG ANADOLU</a></li>
+                            <li><a class="dropdown-item" href="https://baykartech.com/tr/uav/bayraktar-kizilelma/" download="https://baykartech.com/tr/uav/bayraktar-kizilelma/">Kızılelma</a></li>
+                            <!--<li><a class="dropdown-item" href="" download=""></a></li>-->
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Savunma Sanayi Şirketleri
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-scrollable">
+                            <li><a class="dropdown-item" href="https://www.aselsan.com/tr">Aselsan</a></li>
+                            <li><a class="dropdown-item" href="https://www.havelsan.com/tr/">Havelsan</a></li>
+                            <li><a class="dropdown-item" href="https://www.roketsan.com.tr/tr">Roketsan</a></li>
+                            <li><a class="dropdown-item" href="https://www.stm.com.tr/tr">STM</a></li>
+                            <li><a class="dropdown-item" href="https://baykartech.com/tr/">Baykar</a></li>
+                            <li><a class="dropdown-item" href="https://www.fnss.com.tr/tr">FNSS</a></li>
+                            <li><a class="dropdown-item" href="https://www.nurolmakina.com.tr/tr">Nurol Makine</a></li>
+                            <li><a class="dropdown-item" href="https://www.kalekalip.com.tr/">Kale kalıp</a></li>
+                            <li><a class="dropdown-item" href="https://www.avciss.com.tr/">Avcı Savunma</a></li>
+                            <li><a class="dropdown-item" href="https://www.deryaarms.com/">Derya Arms</a></li>
+                            <li><a class="dropdown-item" href="https://www.canikarms.com/">Canik Arms</a></li>
+                            <li><a class="dropdown-item" href="https://www.mke.gov.tr/">MKE</a></li>
+                            <li><a class="dropdown-item" href="https://www.tusas.com/">Tuşaş</a></li>
+                            <li><a class="dropdown-item" href="https://www.tei.com.tr/">TEİ</a></li>
+                            <li><a class="dropdown-item" href="https://www.sarsilmaz.com/">Sarsılmaz</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--<p id="kws">tr</p>-->
+    <br />
+    <!--csharpnet/tr.jpg-->
+    <div class="container11">
+        <button onclick="sol()" class="csde">&lt;</button>
+        <img id="ekranresmi" src="csharpnet/tr.jpg" alt="logo" class="resim" />
+        <button onclick="sag()" class="csde">&gt;</button>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-sm-6 mb-3 mb-sm-0" id="Csharp">
+            <div class="card">
+                <img id="Csharpresmi"src="https://www.talentcoders.co/wp-content/uploads/2023/05/c-sharp-nedir-c-sharp-programlama-dili-1574612328.webp" class="card-img-top" alt="..." style="width:150px;height:75px">
+                <div class="card-body">
+                    <h5 class="card-title">C#</h5>
+                    <p class="card-text"> C# (C Sharp), Microsoft tarafından geliştirilmiş, modern, nesne yönelimli (object-oriented) bir programlama dilidir. .NET platformunun bir parçası olan C#, özellikle Windows uygulamaları, web uygulamaları, oyun geliştirme ve daha birçok farklı alanda kullanılır. C# ilk olarak 2000 yılında duyurulmuş ve günümüze kadar birçok yenilikle gelişimini sürdürmüştür..NET Framework, Microsoft tarafından geliştirilmiş, Windows platformlarında uygulama geliştirmeyi kolaylaştıran bir yazılım geliştirme platformudur. Özellikle masaüstü uygulamaları, web uygulamaları, hizmetler (services) ve daha fazlasını oluşturmak için kullanılır. C#, bu platform üzerinde yaygın olarak kullanılan bir programlama dilidir.</p>
+                    <a href="csharp.html" class="btn btn-primary">C#</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6" id="Cpp">
+            <div class="card">
+                <img id="Cppresmi" src="https://www.vikingsoftware.com/wp-content/uploads/2024/02/C-2.png" class="card-img-top" alt="..." style="width:150px;height:75px">
+                <div class="card-body">
+                    <h5 class="card-title">C++(ARDUİNO)</h5>
+                    <p class="card-text">Arduino, C++ tabanlı bir geliştirme platformudur. Elektronik projelerde kullanılan, mikrodenetleyici tabanlı bir açık kaynak donanım ve yazılım geliştirme ortamıdır. Arduino projelerini geliştirmek için kullanılan dil, C++'ın bir alt kümesi olan ve Arduino IDE içinde çalışan basitleştirilmiş bir yapıdadır.</p>
+                    <a href="CPLUSPLUS.html" class="btn btn-primary">C++</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-sm-6 mb-3 mb-sm-0" id="MySql">
+            <div class="card">
+                <img id="MySqlresmi"src="https://cdn.clever-cloud.com/uploads/2023/03/mysql.svg" class="card-img-top" alt="..." style="width:150px;height:75px">
+                <div class="card-body">
+                    <h5 class="card-title">MYSQL</h5>
+                    <p class="card-text">MySQL, açık kaynak kodlu ve dünyada en çok kullanılan ilişkisel bir veritabanı yönetim sistemidir (RDBMS). SQL (Structured Query Language) dilini kullanarak veritabanlarını yönetmek için güçlü bir araç sunar. MySQL, özellikle web uygulamaları, e-ticaret siteleri ve veri analitiği gibi uygulamalarda popülerdir.</p>
+                    <a href="veritabanı.html" class="btn btn-primary">MYSQL</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6" id="HTML">
+            <div class="card" id="HTMLresmi">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj5K08rKxUEHZsgxTHElnQc6bFEmuVzD6FUg&s" class="card-img-top" alt="..." style="width:150px;height:75px">
+                <div class="card-body">
+                    <h5 class="card-title">HTML</h5>
+                    <p class="card-text">HTML (HyperText Markup Language), web sayfalarını oluşturmak için kullanılan bir işaretleme dilidir. HTML; metin, resim, video ve bağlantılar gibi içerikleri yapılandırmak ve tarayıcıda görünebilir hale getirmek için kullanılır. CSS (Cascading Style Sheets) HTML ile tasarlanan içeriğe stil eklerken, JavaScript web sayfasına dinamik davranışlar kazandırır.</p>
+                    <a href="HTMLYAZILIMDILI.html" class="btn btn-primary">HTML</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <hr />
+    <div class="row">
+        <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card" id="siper">
+                <img id="siperresmi" src="https://www.savunmasanayist.com/wp-content/uploads/2022/04/SIPER-2.jpg" class="card-img-top" alt="..." style="width:150px;height:75px">
+                <div class="card-body">
+                    <h5 class="card-title">SİPER(HAVA SAVUNMA SİSTEMİ)</h5>
+                    <p class="card-text">
+                        UZUN MENZİLLİ BÖLGE HAVA VE FÜZE SAVUNMA SİSTEMİ PROJESİ AŞAMA-C (SİPER)
+                        Savunma Sanayii Başkanlığı ile ASELSAN-ROKETSAN-TÜBİTAK SAGE İş Ortaklığı arasında imzalanan Sözleşme kapsamında, uzun menzil ve yüksek irtifadaki hava soluyan hedeflere  (muharip uçak, seyir füzesi, İHA, helikopter) karşı etkili bir hava savunma sisteminin azami oranda milli imkânlarla geliştirilmesi ve yurt içi kaynaklar kullanılarak üretilmesi hedeflenmektedir. Projenin Sistem Tasarım Tanımlama Aşaması faaliyetleri devam etmektedir.
+                        <ul style="list-style:square">
+                            <li>Sistem Azami Önleme Menzili : 150 km</li>
+                            <li>Önleme İrtifası : 0.1-30 km</li>
+                            <li>Takip Edilebilecek Hedef Sayısı : 100</li>
+                            <li>Takip Edilebilecek Hedef Sayısı : 100</li>
+                            <li>Yanca Kapsama : 360°</li>
+                        </ul>
+                    </p>
+                    <a href="https://wwwcdn.aselsan.com/api/file/SIPER_TR.pdf" download="https://wwwcdn.aselsan.com/api/file/SIPER_TR.pdf" class="btn btn-primary">Siper</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card" id="kaan">
+                <img id="kaanresmi" src="https://istanbulticaretgazetesi.com/front/uploads/blog/thumbnail/1683493200qCtaP1J11aH45Yl.webp" class="card-img-top" alt="..." style="width:150px;height:75px">
+                <div class="card-body">
+                    <h5 class="card-title">KAAN(5. NESİL SAVAŞ UÇAĞI)</h5>
+                    <p class="card-text">
+                        Milli Muharip Uçak Geliştirilmesi (KAAN) Projesi kapsamında, 2020’li yılların sonundan itibaren F-16 uçaklarının yerini alacak yeni nesil savaş uçağının tasarımını ve üretimini yapmak, aynı zamanda da KAAN’ın Türkiye Cumhuriyeti’nin envanterinde bulunan ilgili diğer hava araçlarıyla ve platformlarla uyumlu şekilde çalışabilmesini sağlamak amaçlanmaktadır. KAAN Projesi ile Türkiye’nin 5. nesil muharip uçak konusundaki yeteneklerinin arttırılması ve bu alanda dünya çapınca sınırlı sayıdaki ülkeler arasında yer alması hedeflenmektedir. KAAN, düşük görünürlük, dâhili silah yuvası, yüksek manevra kabiliyeti, arttırılmış durumsal farkındalık ve sensör füzyonu gibi yüksek teknolojik kabiliyetleri içerecek olup hem hava-hava hem de hava-yer muhabereleri için üstün yetenekler sunmaktadır.
+                        <ul style="list-style:square">
+                            <li>Yeni Silahlarla Arttırılmış Havadan Havaya Muharebe Menzili</li>
+
+
+                            <li> Yüksek/Süpersonik Hızda Dahili Silah Yuvalarından Hassas ve Tam Vuruş</li>
+
+
+                            <li> Yapay Zekâ ve Nöral Ağ Desteğiyle Arttırılmış Muharebe Gücü</li>
+                        </ul>
+                    </p>
+                    <a href="https://www.tusas.com/urunler/ucak/ozgun-gelistirme/kaan" class="btn btn-primary">KAAN</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <br />
+    <div class="row">
+        <div class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card" id="suvari">
+                <img id="suvariresmi" src="https://www.millisavunma.com/wp-content/uploads/2021/09/golge_suvari1.jpg" class="card-img-top" alt="..." style="width:150px;height:75px">
+                <div class="card-body">
+                    <h5 class="card-title">Gölge Süvari</h5>
+                    <p class="card-text">
+                        GÖLGE SÜVARİ, muharebe sahasının çoklu operasyon ihtiyaçlarını karşılamak, askeri birlikleri her türlü harekât ortamında desteklemek ve zorlu arazilerde yüksek hareket kabiliyeti sunmak üzere geliştirilen modüler otonom insansız kara araçları ailesidir.
+                        <ul>
+                            <li>Askeri standartlarda otonom kontrol ve mimarisi</li>
+                            <li>Etkili kablosuz bağlantı</li>
+                            <li>Çoklu görevlere uygun modüler tasarım</li>
+                            <li>Büyüme potansiyeline sahip açık mimarı</li>
+                            <li>360˚ algılama sistemi</li>
+                            <li>Yüksek ateş gücü</li>
+                        </ul>
+                    </p>
+                    <a href="https://www.fnss.com.tr/uploads/docs/2024TRCATALOGUE/1713880224_ika-brosur-2024-tr.pdf?1713880235" download="https://www.fnss.com.tr/uploads/docs/2024TRCATALOGUE/1713880224_ika-brosur-2024-tr.pdf?1713880235" class="btn btn-primary">GÖLGE SÜVARİ</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card" id="anadolu">
+                <img id="anadoluresmi" src="https://www.ssb.gov.tr/Images/Uploads/MyContents/L_20221206142603940204.jpg" class="card-img-top" alt="..." style="width:150px;height:75px">
+                <div class="card-body">
+                    <h5 class="card-title">TCG ANADOLU</h5>
+                    <p class="card-text">
+                        Çok Maksatlı Amfibi Hücum Gemisi TCG ANADOLU; bir amfibi tabur ile gerekli muharebe ve destek araçlarını ana üs desteği olmadan kriz bölgelerine ulaştırma kabiliyetine ve havuzunda taşıdığı çıkarma araçları ile çıkarma operasyonlarına katılabilme yeteneğine sahip olup, üzerinde helikopterler ve insansız hava araçlarıyla gece ve gündüz operasyon yapmasına olanak sağlayacak bir uçuş güvertesi bulunmaktadır.
+                        <ul>
+                            <li style="text-align: justify;">Uzunluk: 231.82 m</li>
+                            <li style="text-align: justify;">Uçuş güvertesi uzunluğu: 202 m</li>
+                            <li style="text-align: justify;">Genişlik: 32 m</li>
+                            <li style="text-align: justify;">Yükseklik: 58 m</li>
+                            <li style="text-align: justify;">Azami Surat: ~ 21 knot (tam yuk ile)</li>
+                            <li style="text-align: justify;">Sürekli Ekonomik Surat: 16 knot</li>
+                            <li style="text-align: justify;">Menzil: 9.000 nm&nbsp;</li>
+                            <li style="text-align: justify;">Seyir Süresi: 30 gün (lojistik destek almadan)</li>
+                            <li style="text-align: justify;">Hizmet Süresi: 40 yıl</li>
+                            <li style="text-align: justify;">Denizcilik Özelliği</li>
+                            <li style="text-align: justify;">Deniz Durumu 5’te, uçar birlik operasyonları</li>
+                            <li style="text-align: justify;">Deniz Durumu 4’te, yükleme ve boşaltma operasyonları</li>
+                            <li style="text-align: justify;">Uçuş Güvertesi: 5.440 m2 (6 adet iniş noktası, maksimum 35 tona kadar ağırlıktaki platformların inişine uygun)</li>
+                            <li style="text-align: justify;">Hangar Alanı: 900 m2 (F-35B, S-70B, AW-149, CH-47, vb)</li>
+                            <li style="text-align: justify;">Dok Alanı: 1.165 m2 (4 x LCM veya 2 x LCVP)</li>
+                            <li style="text-align: justify;">Ağır Yük Garajı: 1.410 m2 (Tank, AAV, TEU Konteyner, vb)</li>
+                            <li style="text-align: justify;">Hafif Kargo Garajı: 1.880 m2 (AAV, ZPT, Konteyner, vb)</li>
+                            <li style="text-align: justify;">12 derece eğimli kalkış rampası</li>
+                        </ul>
+                    </p>
+                    <a href="https://www.ssb.gov.tr/WebSite/contentlist.aspx?PageID=373&LangID=1" class="btn btn-primary">TCG ANADOLU(PDF DEĞİLDİR)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <div class="row">
+        <div class="col-sm-6 mb-3 mb-sm-0">
+            <div  class="card" id="knt">
+                <img id="kntresmi" src="https://www.havelsan.com/uploads/images/urunler/askeri-simulasyon-egitim/keskin-nisanci-simulatoru/large/1711812200_havelsan-keskin-nisanci-simulatoru-b.webp" class="card-img-top" alt="..." style="width:150px;height:75px">
+                <div class="card-body">
+                    <h5 class="card-title">KESKİN NİŞANCI SİMÜLASYONU</h5>
+                    <p class="card-text">
+                        Keskin nişancı eğitimini ilk defa alacak personelin, gerçek mühimmat kullanmadan önce nişan alma tekniklerini bir eğitim ortamında uygulamaları gerekmektedir. Eğitimler, sınıf ortamında mühimmat kullanmadan verilebilmekte ancak bu yöntemlerle gerçek bir atış hissiyatı sağlanamamakta, dürbün kullanım tecrübesi kazanılamamaktadır.
+                        <ul class="grey_list"><li>Güvenli ve Kontrollü Bir Ortamda Eğitim İmkânı</li><li>Gerçek Silah ve Dürbün Kullanarak Sınıf Ortamında Eğitim</li><li>Harekât Alanında Karşılaşılan Durumlar Dahil Tüm Kullanıcı İsteklerinin Senaryolara Eklenmesi ile Gerçekçi Senaryoların Oluşturulması</li><li>Değişken Arazi, Hava ve Rüzgâr, Gün ve Mesafe Şartları Altında Eğitim</li><li>MilDot veya Diğer Skoplar ile Mesafe Kestirim, Balistik ve Rüzgâr Düzeltme Eğitimleri</li></ul>
+                        <a href="https://www.havelsan.com/uploads/docs/urunler/askeri-simulasyon/1720962229_keskin-nisanci-simulatoru-brosur.pdf" download="https://www.havelsan.com/uploads/docs/urunler/askeri-simulasyon/1720962229_keskin-nisanci-simulatoru-brosur.pdf" class="btn btn-primary">Keskin Nişancı Simülsayonu</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card" id="tb2">
+                <img id="tb2resmi" src="https://cdnuploads.aa.com.tr/uploads/Contents/2021/10/27/thumbs_b_c_9bb2f158be6bf7018342ead35d3647dd.jpg" class="card-img-top" alt="..." style="width:150px;height:75px">
+                <div class="card-body">
+                    <h5 class="card-title">BAYRAKTAR TB2</h5>
+                    <p class="card-text">
+                        Baykar tarafından geliştirilerek kullanıma sunulan Bayraktar TB2 Taktik S/İHA Sistemi, kullanıcıya tüm çözümleri bir arada sunan bütünleşik ağ tabanlı bir sistem mimarisidir. Sistem, Bayraktar TB2 S/İHA Platformu, Yer Kontrol İstasyonu, Yer Veri Terminali, Uzak Görüntü Terminali, İleri Üs ve Jeneratör ile Römork modüllerinden oluşur.
+                        <ul class="propertyList">  <li>Tam Otomatik Uçuş Kontrol ve 3 Yedekli Otopilot Sistemi (Triple Redundant)</li>  <li>Yer Sistemlerine Bağımlı Olmaksızın Tam Otomatik İniş ve Kalkış Özelliği</li>  <li>GPS Bağımlılığı Olmaksızın Dahili Sensör Füzyonu İle Seyrüsefer Özelliği</li>  <li>16,000 Feet Operasyonel İrtifa</li>  <li>27 Saat 3 Dakika Uçuş Rekoru</li>  <li>22.000 Feet Maksimum İrtifa</li>  </ul>
+
+                    </p>
+                    <a href="https://cdn.bayraktartech.az/media/documents/5jbBlmG8SEa4VZHLyAXnICFraIX4WQO5.pdf" class="btn btn-primary">BAYRAKTAR TB2</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div style="background-color:red" id="sorun">
+        <p style="color:white;text-align:center">!!!Hatamız varsa düzeltmek için !!!</p>
+        <a href="mailto:akincisiha374@gmail.com" style="color:white;text-align:left">
+            Gmail:akincisiha374@gmail.com
+        </a>
+        <p style="color:white;text-align:right">
+            Tel. No:000000000000
+        </p>
+    </div>
+    <!-- string metodları-->
+    <script src="olaylar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--github domain-->
+</body>
+</html>
